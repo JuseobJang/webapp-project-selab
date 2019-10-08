@@ -1,0 +1,46 @@
+.menu li{
+  list-style-type:none;
+}
+
+.menu a{
+  font-family:"Helvetica";
+  text-decoration:none;
+  color:#1E90FF;
+}
+/* DESIGN */
+.menu{
+  padding-left: 0px;
+  margin: 0 0 0 0;
+  position: absolute;
+  width: 1300px;
+  top: 0%;
+
+}
+
+.menu li{
+  margin: 0 0 0 0;
+  border : 0;
+  float: left;
+  width: 160px;
+  text-align: center;
+  /* border: 3px solid green; */
+
+}
+
+
+.menu a{
+  display:block;
+  height:50px;
+  line-height:50px;
+  background-color:#1E90FF;
+  color:#ffffff;
+  padding:0 20px;
+  border-bottom:1px;
+}
+
+.menu a:hover{
+  background-color:#00BFFF;
+  color:#ffffff;
+}
+
+/* Home main Contents 채우고 난 후 작업 -> footer를 bottom에 고정*/
