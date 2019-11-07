@@ -1,0 +1,28 @@
+.lefttable {
+	width:576px;
+	float: left;
+
+}
+
+.righttable{
+	width: 576px;
+	float: right;
+}
+
+table{
+	width: 576px;
+	border-top: 4px solid skyblue;
+	margin-top: 26px;
+}
+table th{ 
+	padding: 10px; 
+	background-color: #E6E6E6;
+}
+table td{
+	padding: 12px; 
+	background-color:#FAFAFA;
+}
+.center{
+	text-align: center;
+	background-color: #F2F2F2;
+}
