@@ -1,41 +1,37 @@
-.menu li{
-  list-style-type:none;
+nav{
+  min-width: 1000px;
+  position: absolute;
+  top: 0;
+  width: 80%;
 }
 
-.menu a{
-  font-family:"Helvetica";
-  text-decoration:none;
-  color:#1E90FF;
-}
-/* DESIGN */
+
+
 .menu{
   padding-left: 0px;
   margin: 0 0 0 0;
-  position: absolute;
-  width: 1180px;
-  top: 0%;
-
+  width: 100%;
 }
 
 .menu li{
   margin: 0 0 0 0;
   border : 0;
   float: left;
-  width: 144px;
   text-align: center;
-  /* border: 3px solid green; */
+  width: 12.5%;
+  list-style-type:none;
+
 
 }
-
 
 .menu a{
   display:block;
   height:50px;
   line-height:50px;
   background-color:rgba(22, 106, 232, 0.8);
-  color:#ffffff;
-  padding:0 20px;
-  border-bottom:1px;
+  color:white;
+  font-family:"Helvetica";
+  text-decoration:none;
 }
 
 .menu a:hover{

@@ -62,7 +62,7 @@
 }
 #slide {
   height: 500px;
-  width: 1152px;
+  min-width: 1000px;
   position: relative;
   overflow: hidden;
   margin: 0;
@@ -88,7 +88,7 @@
 
 #slide li {
   float: left;
-  width: 1152px;
+  width: inherit;
   height: 100%;
 }
 

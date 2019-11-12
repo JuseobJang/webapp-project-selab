@@ -1,4 +1,4 @@
-.contact h1{
+article h1{
   font-size: 50px;
   margin-bottom: 1px;
   padding-top: 20px;
@@ -6,7 +6,7 @@
   margin-top: 35px;
 }
 
-.content h2{
+article h2{
   padding-left: 3px;
   background-color: rgb(161, 250, 213);
   font-size: 35px;
@@ -17,22 +17,22 @@
 
 }
 
-.content{
+section{
   background-color: white;
   border : 3px solid rgb(88, 212, 245);
   border-radius: 15px;
   overflow: hidden;
-  width: 1146px;
+  min-width: 1000px;
 }
 
-.content ul{
+section ul{
   margin-left: 50px;
   list-style-type: circle;
   overflow: hidden;
   font-size: 15pt;
 }
 
-.content iframe{
+section iframe{
   float: left;
   width: 400px;
   height: 400px;
