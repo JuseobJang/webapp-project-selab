@@ -27,7 +27,8 @@ table td{
 }
 
 table{
-  width: 1152px;
+  min-width: 1111px;
+	width: 100%;
 }
 
 table tr td{

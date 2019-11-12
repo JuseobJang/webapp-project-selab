@@ -32,7 +32,7 @@ section{
   border : 3px solid rgb(88, 212, 245);
   border-radius: 15px;
   overflow: hidden;
-  width: 1146px;
+  min-width: 1000px;
   margin-top: 5px;
   margin-bottom: 20px;
 }
