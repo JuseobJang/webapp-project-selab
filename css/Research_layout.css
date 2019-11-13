@@ -12,9 +12,11 @@ section {
 	height: 500px;
 	padding: 30px;
 	margin: 10px;
+	margin-top: 0;
 	border-radius: 5px;
-	box-shadow: 1px 1px 15px #F2F2F2,
-	-1px -1px 15px#F2F2F2, 1px -1px 15px#F2F2F2, -1px 1px 15px#F2F2F2;
+	box-shadow: 1px 1px 15px #E6E6E6,
+	-1px -1px 15px#E6E6E6, 1px -1px 15px#E6E6E6, -1px 1px 15px#E6E6E6;
+	border-top: solid 8px gray;
 }
 
 section img {
