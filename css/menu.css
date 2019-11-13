@@ -2,41 +2,54 @@ nav{
   min-width: 1111px;
   position: absolute;
   top: 0;
-  width: 80%;
+  width: 90%;
+  background: white;
+  height: 90px;
+}
+
+nav a img{
+  margin: 20px 10px 25px 30px;
+  padding: 3px;
+  float: left;
+  background-color: rgba(185, 179, 185, 0.39);
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
 }
 
 
-
-.menu{
+nav ul{
   padding-left: 0px;
   margin: 0 0 0 0;
   width: 100%;
+  vertical-align: middle;
+
 }
 
-.menu li{
-  margin: 0 0 0 0;
+nav ul li{
+  margin:  25px 10px 25px 0;
   border : 0;
-  float: left;
+  height: 30px;
+  float: right;
   text-align: center;
-  width: 12.5%;
   list-style-type:none;
 
 
 }
 
-.menu a{
+nav ul li a{
   display:block;
   height:50px;
+  width: 100px;
   line-height:50px;
-  background-color:rgba(22, 106, 232, 0.8);
-  color:white;
+  color:rgb(61, 60, 60);
   font-family:"Helvetica";
   text-decoration:none;
 }
-
-.menu a:hover{
-  background-color:rgb(174, 204, 232);
+nav ul li a:hover{
+  background-color:rgb(198, 191, 193);
   color:#ffffff;
+  border-radius: 30px;
 }
 
 /* Home main Contents 채우고 난 후 작업 -> footer를 bottom에 고정*/
