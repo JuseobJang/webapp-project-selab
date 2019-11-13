@@ -1,11 +1,37 @@
 .circle {
 	width: 20px;
 	height: 20px;
-	background-color: #65D4D2;
+	background-color: #A6A8A8;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
 	display: inline-block;
+}
+.circle:hover{
+  width: 23px;
+  height: 23px;
+}
+.size1{
+  width: 70px;
+}
+.size2{
+  width: 300px;
+}
+
+
+.white td{
+  background-color: white;
+}
+
+#ourcourse{
+  background-color: #6BCCED;
+}
+
+#ourcourse:hover{
+  background-color: #7ED3F0;
+}
+#ourcourse:link{
+  text-decoration: none;
 }
 
 table th{
@@ -20,8 +46,8 @@ table th{
 table td{
   	height: 40px;
   	vertical-align: middle;
-  	padding-left: 20px;
-    padding-right: 20px;
+  	padding-left: 10px;
+    padding-right: 10px;
   	background-color: #edf7fa;
   	text-align: center;
 }
@@ -29,9 +55,12 @@ table td{
 table{
   min-width: 1111px;
 	width: 100%;
+
+
 }
 
 table tr td{
 	border-bottom: 1px solid #dfdfdf;
 	border-right: 1px solid #dfdfdf;
 }
+
