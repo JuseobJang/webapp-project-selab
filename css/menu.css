@@ -52,8 +52,11 @@ nav ul li ul {
   background: rgba(221, 216, 216, 0.5);
   display: none;
   padding: 0px;
+  margin: 0px;
   border: 0px;
+  position: absolute;
   width: 300px;
+  z-index: 200;
   border-radius: 30px;
 }
 
