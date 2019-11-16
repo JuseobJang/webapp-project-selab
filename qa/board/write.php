@@ -21,8 +21,22 @@
 	<link rel="stylesheet" href="./css/board.css" />
 	<link rel="stylesheet" href="../../css/layout.css" />
 	<link rel="stylesheet" href="../../css/menu.css" />
+	<link rel="stylesheet" href="./css/write.css" />
 </head>
 <body>
+	<nav>
+    <a href="../../html/Home.html"><img src="/../images/selab.png" align="center" width="72" height="26"></a>
+    <ul class="menu">
+      <li><a href="../../html/Notice.html">Notice</a></li>
+      <li><a href="../../html/Members.html">Members</a></li>
+      <li><a href="../../html/Research.html">Research</a></li>
+      <li><a href="../../html/Publications.html">Publications</a></li>
+      <li><a href="../../html/Courses.html">Courses</a></li>
+      <li><a href="index.php">Q & A</a></li>
+      <li><a href="../../html/Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
 	<article class="boardArticle">
 		<h3>Q & A</h3>
 		<div id="boardWrite">
