@@ -15,7 +15,7 @@ if(isset($bNo)) {
 	$result = $db->query($sql);
 	$row = $result->fetch_assoc();
 
-	//비밀번호가 맞다면 삭제 쿼리
+	//비밀번호가 맞다면 삭제 쿼리 실행함
 	if($row['cnt']) {
 		$sql = 'delete from board_free where b_no = ' . $bNo;
 	//틀리다면 메시지 출력하고 이전화면

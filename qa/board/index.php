@@ -58,17 +58,17 @@
 		$firstPage = ($currentSection * $oneSection) - ($oneSection - 1); //현재 섹션의 처음 페이지
 
 		if($currentSection == $allSection) {
-			$lastPage = $allPage; //현재 섹션이 마지막 섹션이라면 $allPage가 마지막 페이지가 된다.
+			$lastPage = $allPage; //현재 섹션이 마지막 섹션이라면 $allPage가 마지막 페이지가 된다
 		} else {
 			$lastPage = $currentSection * $oneSection; //현재 섹션의 마지막 페이지
 		}
 
-		$prevPage = (($currentSection - 1) * $oneSection); //이전 페이지, 11~20일 때 이전을 누르면 10 페이지로 이동.
-		$nextPage = (($currentSection + 1) * $oneSection) - ($oneSection - 1); //다음 페이지, 11~20일 때 다음을 누르면 21 페이지로 이동.
+		$prevPage = (($currentSection - 1) * $oneSection); //이전 페이지, 11~20일 때 이전을 누르면 10 페이지로 이동
+		$nextPage = (($currentSection + 1) * $oneSection) - ($oneSection - 1); //다음 페이지, 11~20일 때 다음을 누르면 21 페이지로 이동
 
 		$paging = '<ul>'; // 페이징을 저장할 변수
 
-		//첫 페이지가 아니라면 처음 버튼을 생성
+		//첫 페이지가 아니면 처음 버튼을 만듬
 		if($page != 1) {
 			$paging .= '<li class="page page_start"><a href="./index.php?page=1' . $subString . '">1</a></li>';
 		}
@@ -85,12 +85,12 @@
 			}
 		}
 
-		//마지막 섹션이 아니면 다음 버튼을 생성
+		//마지막 섹션이 아니면 다음 버튼을 만듬
 		if($currentSection != $allSection) {
 			$paging .= '<li class="page page_next"><a href="./index.php?page=' . $nextPage . $subString . '">Next</a></li>';
 		}
 
-		//마지막 페이지가 아니라면 끝 버튼을 생성
+		//마지막 페이지가 아니라면 끝 버튼을 만듬
 		if($page != $allPage) {
 			$paging .= '<li class="page page_end"><a href="./index.php?page=' . $allPage . $subString . '">Last Page</a></li>';
 		}

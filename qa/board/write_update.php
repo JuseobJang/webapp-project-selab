@@ -9,7 +9,7 @@
 	//bno이 없다면(글 쓰기라면) 변수 선언
 	if(empty($bNo)) {
 		$bID = $_POST['bID'];
-		$date = date('Y-m-d H:i:s');
+		$date = date('Y-m-d H:i:s',strtotime("+9 hours"));
 	}
 
 	//항상 변수 선언
