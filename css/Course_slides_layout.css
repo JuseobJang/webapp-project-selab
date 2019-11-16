@@ -1,28 +1,73 @@
-.lefttable {
-	width:576px;
-	float: left;
+article{
+	border: 2px solid #E6E6E6;
+	overflow: hidden;
+}
 
+table th{
+	padding: 14px; 
+	font-size: 30px;
+	margin-left: 20px;
+	margin-top: 100px;
+	font-weight: lighter;
+	padding-bottom: 40px;
+}
+table td{
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+table a{
+	font-size: 20px;
+}
+
+table a:link { color: black; text-decoration: none;}
+table a:visited { color: black; text-decoration: none;}
+table a:hover { color: black; text-decoration: underline;}
+
+span{
+	font-size: 25px;
+	color: #3F6BA5;
+}
+.circle {
+	width: 8px;
+	height: 8px;
+	background-color: skyblue;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	display: inline-block;
+}
+.lefttable {
+	width: 600px;
+	float: left;
 }
 
 .righttable{
-	width: 576px;
-	float: right;
+	width: 620px;	
 }
 
-table{
-	width: 576px;
-	border-top: 4px solid skyblue;
-	margin-top: 26px;
-}
-table th{ 
-	padding: 10px; 
-	background-color: #E6E6E6;
-}
-table td{
-	padding: 12px; 
-	background-color:#FAFAFA;
-}
 .center{
 	text-align: center;
-	background-color: #F2F2F2;
+	width: 45px;
+	padding-left: 60px;
+}
+
+.slide{
+	float: right;
+	color: #3F6BA5;
+	font-size: 20px;
+	font-weight: 20;
+	padding:10px 37px 10px 37px;
+	border-radius: 5px;
+	border: 2px solid #E0ECFD;
+	background-color: #E0ECFD;
+	text-decoration: none;
+	margin-right: 20px;
+
+}
+
+.slide:hover{
+	background-color: #EDF3FC;
+	border: 2px solid #EDF3FC;
+	text-decoration: none;
 }
