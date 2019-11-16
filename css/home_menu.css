@@ -52,4 +52,32 @@ nav ul li a:hover{
   border-radius: 30px;
 }
 
+nav ul li ul {
+  background: rgba(221, 216, 216, 0.5);
+  display: none;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  position: absolute;
+  width: 200px;
+  z-index: 200;
+  border-radius: 30px;
+}
+
+nav ul li ul li {
+  float: none;
+  margin-top: 0;
+
+}
+
+nav ul li ul li a{
+  width: 200px;
+}
+
+
+
+nav ul li:hover ul {
+  display: block;
+}
+
 /* Home main Contents 채우고 난 후 작업 -> footer를 bottom에 고정*/
