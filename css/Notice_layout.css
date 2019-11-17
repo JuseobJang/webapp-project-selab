@@ -1,26 +1,22 @@
-
-
-
 .table{
   border-collapse: collapse;
-  border-top: 10px solid #168;
+  border-top: solid white;
   width: 100%;
-
 }
 
 .table th{
-  color:#168;
-  background: #f0f6f9;
+  color:rgb(0, 131, 202);
+  font-size: 20px;
+  background: white;
   text-align: center;
 }
 
 
 .table th,.table td{
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ddd;
   text-align: center;
 }
-
 
 
 .table th:last-child, .table td:last-child{
@@ -68,4 +64,17 @@ button:hover{
   color: #fff;
   border: 1px solid #f40;
   background-color: #f40;
+}
+
+section{
+  background-color: white;
+  border : 3px solid #d3d3d3;
+  overflow: solid;
+  min-width: 1000px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 15px #E6E6E6,
+  -1px -1px 15px#E6E6E6, 1px -1px 15px#E6E6E6, -1px 1px 15px#E6E6E6;
+  border-top: solid 8px gray;
 }

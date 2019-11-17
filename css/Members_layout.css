@@ -42,6 +42,10 @@ section{
   min-width: 1000px;
   margin-top: 5px;
   margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 15px #E6E6E6,
+  -1px -1px 15px#E6E6E6, 1px -1px 15px#E6E6E6, -1px 1px 15px#E6E6E6;
+  border-top: solid 8px gray;
 }
 
 section ul{
