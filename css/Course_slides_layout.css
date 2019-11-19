@@ -1,8 +1,7 @@
 article{
 	border: 2px solid #E6E6E6;
 	overflow: hidden;
-	background-color: #cbf1f5;
-	color: #357376;
+	background-color: white;
 
 }
 
@@ -23,9 +22,9 @@ table a{
 	font-size: 20px;
 }
 
-table a:link { color: #357376; text-decoration: none;}
-table a:visited { color: #357376; text-decoration: none;}
-table a:hover { color: #357376; text-decoration: underline;}
+table a:link { color: black; text-decoration: none;}
+table a:visited { color: black; text-decoration: none;}
+table a:hover { color: black; text-decoration: underline;}
 
 span{
 	font-size: 25px;
