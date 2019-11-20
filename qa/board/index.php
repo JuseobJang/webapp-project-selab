@@ -115,6 +115,7 @@
 	<link rel="stylesheet" href="./css/board.css" />
 	<link rel="stylesheet" href="../../css/layout.css" />
 	<link rel="stylesheet" href="../../css/menu.css" />
+	
 
 </head>
 <body>
@@ -132,10 +133,10 @@
   </nav>
 
 	<article class="boardArticle">
-		<h3>Q & A</h3>
+		<h1>Q & A</h1>
 		<div id="boardList">
 			<table>
-				<caption class="readHide">Q & A</caption>
+				<caption ></caption>
 				<thead>
 					<tr>
 						<th scope="col" class="no">No.</th>
