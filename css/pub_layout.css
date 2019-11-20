@@ -29,7 +29,8 @@ table th {
   padding-top: 10px;
   padding-bottom: 3px;
   font-weight: bold;
-  color: rgb(0, 131, 202);
+  color: gray;
+  font-size: 20pt;
 
 }
 

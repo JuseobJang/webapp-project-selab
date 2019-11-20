@@ -26,6 +26,7 @@ a.scrollup i:hover {
   border-collapse: collapse;
   border-top: solid white;
   width: 70%;
+  border: none;
 }
 
 .table th{
@@ -34,7 +35,6 @@ a.scrollup i:hover {
   background: white;
   text-align: center;
 }
-
 
 .table th,.table td{
   padding: 12px;
@@ -72,7 +72,7 @@ button:hover{
   color: white;
 }
 
- .page ul ,.page li, .page a {
+.page ul ,.page li, .page a {
   float: left;
   padding: 4px;
   width:15px;
