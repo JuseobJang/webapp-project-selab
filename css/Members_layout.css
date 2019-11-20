@@ -61,13 +61,11 @@ section h2{
 
 section{
   background-color: white;
+  border : 3px solid #d3d3d3;
   overflow: solid;
   min-width: 1000px;
   margin-top: 5px;
   margin-bottom: 20px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 10px rgb(174, 176, 167);
-  border-top: solid 8px rgb(241, 204, 123);;
 }
 
 section ul{

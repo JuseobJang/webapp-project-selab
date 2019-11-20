@@ -25,7 +25,7 @@ a.scrollup i:hover {
 .table{
   border-collapse: collapse;
   border-top: solid white;
-  width: 100%;
+  width: 70%;
 }
 
 .table th{
@@ -85,8 +85,8 @@ button:hover{
 
 .page a:hover{
   color: #fff;
-  border: 1px solid #f40;
-  background-color: #f40;
+  border: 1px solid #FFBF00;
+  background-color: #FFBF00;
 }
 
 section{
@@ -96,7 +96,11 @@ section{
   min-width: 1000px;
   margin-top: 5px;
   margin-bottom: 20px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 10px rgb(174, 176, 167);
-  border-top: solid 8px rgb(241, 204, 123);
+}
+
+.right{
+  float: right;
+  overflow: hidden;
+  margin-right:30px;
+  margin-top: 15px;
 }
