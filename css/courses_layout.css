@@ -1,7 +1,7 @@
 .circle {
 	width: 20px;
 	height: 20px;
-	background-color: #A6A8A8;
+	background-color: #A4A4A4;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
@@ -24,11 +24,11 @@
 }
 
 #ourcourse{
-  background-color: #6BCCED;
+  background-color: rgb(241, 204, 123);;
 }
 
 #ourcourse:hover{
-  background-color: #7ED3F0;
+  background-color: #FFBF00;
 }
 #ourcourse:link{
   text-decoration: none;
@@ -37,7 +37,7 @@
 table th{
   	height: 45px;
   	vertical-align: middle;
-  	background-color: #8bcbe3;
+  	background-color: #F3E2A9;
   	color: white;
   	border-bottom: 3px solid #dfdfdf;
   	text-align: center;
@@ -48,7 +48,7 @@ table td{
   	vertical-align: middle;
   	padding-left: 10px;
     padding-right: 10px;
-  	background-color: #edf7fa;
+  	background-color: #F7F8E0;
   	text-align: center;
 }
 
