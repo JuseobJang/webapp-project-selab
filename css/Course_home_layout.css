@@ -7,7 +7,8 @@ article{
 
 div{
 	border-bottom: 2px solid #E8E9EA;
-	padding-bottom: 16px;
+	padding-top: 10px;
+	padding-bottom: 40px;
 
 }
 a:link{
@@ -70,4 +71,10 @@ section{
 	background-color: rgb(241, 204, 123, 0.4);
 	border: 2px solid white;
 	text-decoration: none;
+}
+.right{
+	float: right;
+	overflow: hidden;
+	margin-right:30px;
+	margin-top: 15px;
 }
