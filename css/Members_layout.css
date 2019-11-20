@@ -42,8 +42,7 @@ section{
   margin-top: 5px;
   margin-bottom: 20px;
   border-radius: 5px;
-  box-shadow: 1px 1px 15px #E6E6E6,
-  -1px -1px 15px#E6E6E6, 1px -1px 15px#E6E6E6, -1px 1px 15px#E6E6E6;
+  box-shadow: 1px 1px 10px rgb(174, 176, 167);
   border-top: solid 8px rgb(241, 204, 123);;
 }
 

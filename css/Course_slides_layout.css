@@ -2,12 +2,12 @@ article{
 	border: 2px solid #E6E6E6;
 	overflow: hidden;
 	background-color: white;
-
 }
 
 table {
 	border-collapse: collapse;
 	width: 50%;
+	border-bottom: 25px solid white;
 }
 
 table th{
@@ -16,6 +16,7 @@ table th{
 	font-size: 30px;
 	margin-left: 20px;
 	margin-top: 100px;
+	border-right: hidden;
 	border-bottom: 25px solid white;
 	font-weight: 400;
 	color: white;
@@ -37,7 +38,7 @@ table a:hover { color: black; text-decoration: underline;}
 
 span{
 	font-size: 25px;
-	color: #3F6BA5;
+	color: #A4A4A4;
 }
 .circle {
 	width: 8px;
@@ -50,6 +51,7 @@ span{
 }
 .lefttable {
 	float: left;
+	border-right: 0.5px solid #A4A4A4;
 }
 
 .center{
@@ -60,20 +62,20 @@ span{
 
 .slide{
 	float: right;
-	color: #3F6BA5;
+	color: white;
 	font-size: 20px;
 	font-weight: 20;
 	padding:10px 37px 10px 37px;
 	border-radius: 5px;
-	border: 2px solid #E0ECFD;
-	background-color: #E0ECFD;
+	border: 2px solid white;
+	background-color: rgb(241, 204, 123, 0.8);
 	text-decoration: none;
 	margin-right: 20px;
 
 }
 
 .slide:hover{
-	background-color: #EDF3FC;
-	border: 2px solid #EDF3FC;
+	background-color: rgb(241, 204, 123, 0.4);
+	border: 2px solid white;
 	text-decoration: none;
 }
