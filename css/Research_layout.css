@@ -3,11 +3,43 @@ body {
 }
 
 article p {
-	font-size: 20px;
+	font-size: 22px;
+	margin-top: 30px;
 }
+.cen{
+	margin-left: 37pxindex;
+}
+.scrollup {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    bottom: 0px;
+    right: 20px;
+    background-color: rgba( 255, 255, 255, 0 );
+    margin-bottom: 40px;
+}
+a.scrollup {
+    outline: 0;
+    text-align: center;
+}
+a.scrollup:hover,a.scrollup:active,a.scrollup:focus {
+	opacity:1;
+	text-decoration:none;
+}
+a.scrollup i {
+    margin-top: 10px;
+    color: #fff;
+}
+a.scrollup i:hover {
+	text-decoration:none;
+}
+
 
 article {
 	min-width: 1200px;
+}
+article li{
+	margin-left: 12px;
 }
 
 section {
