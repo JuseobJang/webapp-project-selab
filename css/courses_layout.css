@@ -42,7 +42,6 @@ a.scrollup i:hover {
   width: 300px;
 }
 
-
 .white td{
   background-color: white;
 }
@@ -54,6 +53,7 @@ a.scrollup i:hover {
 #ourcourse:hover{
   background-color: #FFBF00;
 }
+
 #ourcourse:link{
   text-decoration: none;
 }
@@ -65,7 +65,7 @@ table th{
   	color: white;
   	border-bottom: 3px solid #dfdfdf;
   	text-align: center;
-  }
+}
 
 table td{
   	height: 40px;
@@ -79,12 +79,9 @@ table td{
 table{
   min-width: 1111px;
 	width: 100%;
-
-
 }
 
 table tr td{
 	border-bottom: 1px solid #dfdfdf;
 	border-right: 1px solid #dfdfdf;
 }
-
