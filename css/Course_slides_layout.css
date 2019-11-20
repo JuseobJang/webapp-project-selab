@@ -11,14 +11,15 @@ table {
 }
 
 table th{
-	padding: 14px; 
+	padding: 8px;
+	padding-right: 120px;
 	font-size: 30px;
 	margin-left: 20px;
 	margin-top: 100px;
-	border-bottom: 50px solid white;
-	font-weight: lighter;
+	border-bottom: 25px solid white;
+	font-weight: 400;
 	color: white;
-	background-color: rgb(241, 204, 123);
+	background-color: rgb(241, 204, 123, 0.8);
 }
 
 table td{
@@ -41,19 +42,14 @@ span{
 .circle {
 	width: 8px;
 	height: 8px;
-	background-color: skyblue;
+	background-color: #A4A4A4;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
 	display: inline-block;
 }
 .lefttable {
-	width: 600px;
 	float: left;
-}
-
-.righttable{
-	width: 620px;	
 }
 
 .center{
