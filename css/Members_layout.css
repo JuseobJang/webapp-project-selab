@@ -32,7 +32,7 @@ section h2{
   margin-bottom: 10px;
   margin-left: 10px;
   font-weight: lighter;
-  color: rgb(0, 131, 202);
+  color: black;
 }
 
 section{
@@ -44,7 +44,7 @@ section{
   border-radius: 5px;
   box-shadow: 1px 1px 15px #E6E6E6,
   -1px -1px 15px#E6E6E6, 1px -1px 15px#E6E6E6, -1px 1px 15px#E6E6E6;
-  border-top: solid 8px gray;
+  border-top: solid 8px rgb(241, 204, 123);;
 }
 
 section ul{
