@@ -4,6 +4,7 @@ body{
   margin-bottom: 40px;
   background-color: white;
   font-family: 'Ubuntu';
+  min-height: 800px;
 }
 
 h1{
