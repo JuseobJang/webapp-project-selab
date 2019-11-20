@@ -54,19 +54,20 @@ section{
 }
 .slide{
 	float: right;
-	color:  #3F6BA5;
+	color: white;
 	font-size: 20px;
 	font-weight: 20;
 	padding:10px 37px 10px 37px;
 	border-radius: 5px;
-	border: 2px solid #E0ECFD;
-	background-color: #E0ECFD;
+	border: 2px solid white;
+	background-color: rgb(241, 204, 123, 0.8);
 	text-decoration: none;
 	margin-right: 20px;
 
 }
 
 .slide:hover{
-	background-color: #EDF3FC;
-	border: 2px solid #EDF3FC;
+	background-color: rgb(241, 204, 123, 0.4);
+	border: 2px solid white;
+	text-decoration: none;
 }
