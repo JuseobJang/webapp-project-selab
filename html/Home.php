@@ -4,7 +4,7 @@
 
 <head>
   <link rel="stylesheet" href="../css/layout.css">
-  <link rel="stylesheet" href="../css/home_menu.css">
+  <link rel="stylesheet" href="../css/menu.css">
   <link rel="stylesheet" href="../css/Home_layout.css">
   <link rel="stylesheet" href="../css/login.css">
   <link rel="stylesheet" href="../css/member.css">

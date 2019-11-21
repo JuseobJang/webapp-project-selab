@@ -4,7 +4,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgb(241, 204, 123, 0.7);
+  background: rgb(255, 255, 255, 0.7);
   height: 80px;
 }
 
@@ -38,7 +38,7 @@ nav ul li a {
   height: 50px;
   width: 100px;
   line-height: 50px;
-  color: white;
+  color: black;
   font-family: "Helvetica";
   text-decoration: none;
 }
