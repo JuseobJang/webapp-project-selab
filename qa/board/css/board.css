@@ -2,7 +2,7 @@
 
 /* 글목록 */
 
-#boardList table {width: 720px;margin-top: 100px;}
+#boardList table {width: 720px;margin-top: 100px;margin-left: 300px;}
 
 #boardList th {padding: 5px 0; border-top: 2px solid #666; border-bottom: 1px solid #666;}
 #boardList tr:hover {background: #eee;}
@@ -28,6 +28,8 @@
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
 /* 글쓰기 */
 
 #boardWrite table {width: 720px;}
@@ -40,6 +42,9 @@
 #boardWrite #bContent {width: 550px; height: 300px;}
 
 #boardWrite .btnSet {text-align: center;}
+.btnSet {margin-left: 300px;}
+
+#indexform {margin-left: 300px;}
 
 /* 글읽기 */
 

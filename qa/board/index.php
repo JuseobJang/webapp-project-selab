@@ -195,7 +195,7 @@
 				<?php echo $paging ?>
 			</div>
 			<div class="searchBox">
-				<form action="./index.php" method="get">
+				<form id = "indexform" action="./index.php" method="get">
 					<select name="searchColumn">
 						<option <?php echo $searchColumn=='b_title'?'selected="selected"':null?> value="b_title">Title</option>
 						<option <?php echo $searchColumn=='b_content'?'selected="selected"':null?> value="b_content">Content</option>

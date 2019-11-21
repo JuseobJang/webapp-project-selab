@@ -24,30 +24,41 @@
 	<link rel="stylesheet" href="./css/write.css" />
 </head>
 <body>
-	<nav>
-    <a href="../../html/Home.html"><img src="/../images/selab.png" align="center" width="72" height="26"></a>
-    <ul class="menu">
-      <li><a href="../../html/Notice.html">Notice</a></li>
-      <li><a href="../../html/Members.html">Members</a></li>
-      <li><a href="../../html/Research.html">Research</a></li>
-      <li><a href="../../html/Publications.html">Publications</a></li>
-      <li><a href="../../html/Courses.html">Courses</a></li>
-      <li><a href="index.php">Q & A</a></li>
+<nav>
+    <a href="../../html/Home.php"><img src="../../images/selab.png" align="center" width="72" height="26"></a>
+    <ul>
       <li><a href="../../html/Contact.html">Contact</a></li>
+      <li><a href="./index.php">Q & A</a></li>
+      <li><a href="../../html/Courses.html">Courses</a>
+        <ul>
+          <li><a href="../../html/Course_home.html">Home</a></li>
+          <li><a href="../../html/Course_slides.html">Slides</a></li>
+        </ul>
+      </li>
+      <li><a href="../../html/Publications.html">Publications</a>
+        <ul>
+          <li><a href="../../html/Pub_incon.html">International Conference</a></li>
+          <li><a href="../../html/Pub_injour.html">International Journal</a></li>
+          <li><a href="../../html/Pub_domcon.html">Domestic Conference</a></li>
+          <li><a href="../../html/Pub_domjour.html">Domestic Journal</a></li>
+        </ul>
+      </li>
+      <li><a href="../../html/Research.html">Research</a></li>
+      <li><a href="../../html/Members.html">Members</a></li>
+      <li><a href="../../html/Notice.html">Notice</a></li> 
     </ul>
   </nav>
-
 	<article class="boardArticle">
-		<h3>Q & A</h3>
+		<h1>Q & A</h1>
 		<div id="boardWrite">
-			<form action="./write_update.php" method="post">
+			<form id="writeform" action="./write_update.php" method="post">
 				<?php
 				if(isset($bNo)) {
 					echo '<input type="hidden" name="bno" value="' . $bNo . '">';
 				}
 				?>
 				<table id="boardWrite">
-					<caption class="readHide">Q & A</caption>
+					<caption class="readHide"></caption>
 					<tbody>
 						<tr>
 							<th scope="row"><label for="bID">ID</label></th>

@@ -33,16 +33,28 @@
 	<script src="./js/jquery-2.1.3.min.js"></script>
 </head>
 <body>
-	<nav>
-    <a href="../../html/Home.html"><img src="/../images/selab.png" align="center" width="72" height="26"></a>
-    <ul class="menu">
-      <li><a href="../../html/Notice.html">Notice</a></li>
-      <li><a href="../../html/Members.html">Members</a></li>
-      <li><a href="../../html/Research.html">Research</a></li>
-      <li><a href="../../html/Publications.html">Publications</a></li>
-      <li><a href="../../html/Courses.html">Courses</a></li>
-      <li><a href="index.php">Q & A</a></li>
+<nav>
+    <a href="../../html/Home.php"><img src="../../images/selab.png" align="center" width="72" height="26"></a>
+    <ul>
       <li><a href="../../html/Contact.html">Contact</a></li>
+      <li><a href="./index.php">Q & A</a></li>
+      <li><a href="../../html/Courses.html">Courses</a>
+        <ul>
+          <li><a href="../../html/Course_home.html">Home</a></li>
+          <li><a href="../../html/Course_slides.html">Slides</a></li>
+        </ul>
+      </li>
+      <li><a href="../../html/Publications.html">Publications</a>
+        <ul>
+          <li><a href="../../html/Pub_incon.html">International Conference</a></li>
+          <li><a href="../../html/Pub_injour.html">International Journal</a></li>
+          <li><a href="../../html/Pub_domcon.html">Domestic Conference</a></li>
+          <li><a href="../../html/Pub_domjour.html">Domestic Journal</a></li>
+        </ul>
+      </li>
+      <li><a href="../../html/Research.html">Research</a></li>
+      <li><a href="../../html/Members.html">Members</a></li>
+      <li><a href="../../html/Notice.html">Notice</a></li> 
     </ul>
   </nav>
 	
