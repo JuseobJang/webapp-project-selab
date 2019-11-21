@@ -6,7 +6,15 @@
   <link rel="stylesheet" href="../css/home_menu.css">
   <link rel="stylesheet" href="../css/Home_layout.css">
   <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/member.css">
 
+  <script type="text/javascript">
+    function popOpen(){
+      var pop_url =  "../html/signup.html";
+      var pop_option = "width=400px, height= 640px, reizable=no, status=no, scrollbars=no";
+      window.open(pop_url,"",pop_option);
+    };
+  </script>
   <link href="https://fonts.googleapis.com/css?family=Abel|Farro|Lato|Roboto&display=swap" rel="stylesheet">
 
   <meta charset="utf-8">
@@ -66,22 +74,44 @@
   </article>
 
 
-  <div id='login'>
-    <h2>SIGNUP</h2>
-    <form  action="" method="POST">
-        <input name="id" type='text' placeholder='Username'>
-        <input name="pw" type='password' placeholder='Password'>
+  <?php if (!isset($_SESSION['id'])) { ?>
+    <div id='login'>
+      <h2>SIGNUP</h2>
+      <form  action="../login/loginaction.php" method="POST">
+          <input name="id" type='text' placeholder='Username'>
+          <input name="pw" type='password' placeholder='Password'>
+        <div class='divider'></div>
+        <div class=button><button type="submit">LOG IN</button></div>
+        <p>Don't have an account? <a href="javascript:popOpen();"><span class='reg'>Register.</span></a> </p>
+      </form>
+    </div>
+  <?php } else {?>
+    <div id = 'member'>
+      <?php
+      $id = $_SESSION['id'];
+      $phone = $_SESSION['phone'];
+      $student_id = $_SESSION['student_id'];
+      echo "<p>HELLO! <strong>$id</strong> <a href=\"../login/logout.php\">로그아웃</a></p> ";
+    ?>
       <div class='divider'></div>
-      <div class=button><button type="submit">LOG IN</button></div>
-      <p>Don't have an account? <span class='reg'>Register.</span></p>
-    </form>
-  </div>
-  <div>
-      <a href="#" class="scrollup">
-        <img src="../images/uparrow.png" width="32px" height="32px">
-      </a>
-  </div>
 
+      <div id="infos">
+        <div class="info">
+          <p>Name :</p>
+        </div>
+        <div class="info">
+          <p>phone : <?php echo "$phone" ?></p>
+        </div>
+        <div class="info">
+          <p>Attendance :</p>
+        </div>
+        <div class="info">
+          <p>Student_id : <?php echo "$student_id" ?></p>
+        </div>
+      </div>
+    </div>
+  <?php
+  } ?>
   <footer>
     <p>COPYRIGHT 2014 SELAB, ALL RIGHTS RESERVED. COMPUTER SCIENECE AND ENGINEERING, HANYANG UNIV. LOCATION: ENGINEERING BUILDING #3, ROOM 421. T +82-31-400-4754</p>
   </footer>
