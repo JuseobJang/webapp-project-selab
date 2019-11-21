@@ -30,7 +30,7 @@
   ?>
 
   <nav>
-    <a href="Home.html"><img src="../images/selab.png" align="center" width="72" height="26"></a>
+    <a href="Home.php"><img src="../images/selab.png" align="center" width="72" height="26"></a>
     <ul>
       <li><a href="Notice.html">Notice</a></li>
       <li><a href="Members.html">Members</a></li>
