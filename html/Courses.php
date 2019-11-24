@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
+
 <html lang="en">
 
 <head>
@@ -107,8 +109,19 @@
           <td></td>
         </tr>
         <tr class="white">
-          <td id="ourcourse" onClick="location.href='Course_home.html'">CSE326</td>
-          <td id="ourcourse" onClick="location.href='Course_home.html'"><a>Web Application Development</a></td>
+          <td id="ourcourse" <?php $course = $_SESSION['course'];
+           if($course == "Web Application Development") { ?> 
+          onClick="location.href='Course_home.html'" <?php } 
+          else{ ?> onClick= "alert('수강중인 강의가 아닙니다.')"
+          <?php } ?>>CSE326</td>
+
+          <td id="ourcourse" <?php $course = $_SESSION['course'];
+           if($course == "Web Application Development") { ?> 
+          onClick="location.href='Course_home.html'" <?php } 
+          else{ ?> onClick= "alert('수강중인 강의가 아닙니다.')" 
+          <?php } ?> >
+            Web Application Development
+          </td> 
           <td>
             <div class="circle"></div>
           </td>
@@ -206,8 +219,6 @@
           <td></td>
           <td>
             <div class="circle"></div>
-          </td>
-          <td></td>
         </tr>
         <tr>
           <td>CSE609</td>

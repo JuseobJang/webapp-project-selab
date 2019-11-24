@@ -34,11 +34,7 @@
     <ul>
       <li><a href="Contact.html">Contact</a></li>
       <li><a href="../qa/board/index.php">Q & A</a></li>
-      <li><a href="Courses.html">Courses</a>
-        <ul>
-          <li><a href="Course_home.html">Home</a></li>
-          <li><a href="Course_slides.html">Slides</a></li>
-        </ul>
+      <li><a href="Courses.php">Courses</a>
       </li>
       <li><a href="Publications.html">Publications</a>
         <ul>
@@ -97,6 +93,7 @@
         $permit = $_SESSION['permit'];
         $first_name = $_SESSION['first_name'];
         $last_name = $_SESSION['last_name'];
+        $course = $_SESSION['course'];
         echo "<p>HELLO! <strong>$id</strong> <a href=\"../login/logout.php\">로그아웃</a></p> ";
         if ($permit == 2) {
           ?>
@@ -117,6 +114,9 @@
         <div class="info">
           <p>Student_id : <?php echo "$student_id" ?></p>
         </div>
+        <div class="info">
+          <p>Course : <?php echo "$course" ?></p>
+        </div> 
       </div>
     </div>
   <?php

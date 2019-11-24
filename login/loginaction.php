@@ -25,7 +25,8 @@ if (mysqli_num_rows($result) == 1) {
             $_SESSION['phone'] = $row['phone'];
             $_SESSION['permit'] = $row['permit'];
             $_SESSION['first_name'] = $row['first_name'];
-            $_SESSION['last_name'] = $row['last_name']; ?> <script>
+            $_SESSION['last_name'] = $row['last_name'];
+            $_SESSION['course'] = $row['course']; ?> <script>
                 alert("로그인 되었습니다.");
                 location.replace("../html/Home.php");
             </script>
