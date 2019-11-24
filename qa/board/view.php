@@ -59,7 +59,7 @@
   </nav>
 	
 	<article class="boardArticle">
-		<h3>Q & A</h3>
+		<h1>Q & A</h1>
 		<div id="boardView">
 			<h3 id="boardTitle"><?php echo $row['b_title']?></h3>
 			<div id="boardInfo">
