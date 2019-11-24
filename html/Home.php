@@ -95,6 +95,8 @@
         $phone = $_SESSION['phone'];
         $student_id = $_SESSION['student_id'];
         $permit = $_SESSION['permit'];
+        $first_name = $_SESSION['first_name'];
+        $last_name = $_SESSION['last_name'];
         echo "<p>HELLO! <strong>$id</strong> <a href=\"../login/logout.php\">로그아웃</a></p> ";
         if ($permit == 2) {
           ?>
@@ -104,7 +106,7 @@
 
       <div id="infos">
         <div class="info">
-          <p>Name :</p>
+          <p>Name : <?php echo "$fir_name"."$last_name" ?></p>
         </div>
         <div class="info">
           <p>phone : <?php echo "$phone" ?></p>
@@ -119,11 +121,6 @@
     </div>
   <?php
   } ?>
-
-
-
-
-
 
 
 </body>
