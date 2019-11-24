@@ -17,7 +17,10 @@ if(isset($bNo)) {
 
 	//비밀번호가 맞다면 삭제 쿼리 실행함
 	if($row['cnt']) {
-		$sql = 'delete from board_free where b_no = ' . $bNo;
+		
+		$sql = 'delete from board_free where b_no = ' .$bNo;
+		
+
 	//틀리다면 메시지 출력하고 이전화면
 	} else {
 		$msg = 'Password Incorrect';
@@ -30,15 +33,18 @@ if(isset($bNo)) {
 		exit;
 	}
 }
-
+	$num = $bNo;
 	$result = $db->query($sql);
+	$dltnum = 'update board_free set b_no = b_no - 1 where '.$num.' < b_no';
+	$db->query($dltnum);
+
 
 //쿼리가 정상 실행 되면
 if($result) {
-	$msg = 'Post Deleted';
+	$msg = '글이 삭제 되었습니다.';
 	$replaceURL = './';
 } else {
-	$msg = 'Post Delete rejected';
+	$msg = '글이 삭제되지 않았습니다.';
 ?>
 	<script>
 		alert("<?php echo $msg?>");

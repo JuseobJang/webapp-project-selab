@@ -42,9 +42,25 @@ if(isset($bNo)) {
 
 //글 등록
 } else {
-	
-	$sql = 'insert into board_free (b_no, b_title, b_content, b_date, b_hit, b_id, b_password) values(null, "' . $bTitle . '", "' . $bContent . '", "' . $date . '", 0, "' . $bID . '", password("' . $bPassword . '"))';
-	$msgState = ' 등록 되었';
+
+	$query1 = 'select b_no from board_free';
+	$result1 = $db -> query($query1);
+
+	if($result1 > 0){
+		$prev = 'select max(b_no) from board_free';
+		$a = $db -> query($prev);  
+		// echo "<script> alert('{$a}');</script>";
+		$row = mysqli_fetch_row($a);
+		$b = $row[0] + 1;
+	}
+	else{
+		$b = 1;
+	}
+
+
+	$sql = 'insert into board_free (b_no, b_title, b_content, b_date, b_hit, b_id, b_password) values("'.$b.'", "' . $bTitle . '", "' . $bContent . '", "' . $date . '", 0, "' . $bID . '", password("' . $bPassword . '"))';
+
+	$msgState = '등록';
 	if(empty($bID)){
 		?>
 		<script>
@@ -84,7 +100,7 @@ if(empty($msg)) {
 
 	//쿼리가 정상 실행 됐다면,
 	if($result) {
-		$msg = '글이' . $msgState .'습니다.';
+		$msg = '글이' . $msgState .'되었습니다.';
 		if(empty($bNo)) {
 			$bNo = $db->insert_id;
 		}
