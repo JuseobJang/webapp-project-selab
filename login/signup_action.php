@@ -8,6 +8,8 @@ $pw = $_POST[pw];
 $pw_cf = $_POST[pw_cf];
 $student_id = $_POST[student_id];
 $phone = $_POST[phone];
+$first_name =$_POST[first_name];
+$last_name =$_POST[last_name];
 $date = date('Y-m-d H:i:s');
 
 $query = "select * from member where id='$id'";
@@ -39,7 +41,7 @@ if (strlen($student_id) != 10) { ?>
   exit;
 }
 
-$query1 = "insert into member (id, pw, student_id, phone, date, permit) values ('$id', '$pw','$student_id','$phone', '$date', 0)";
+$query1 = "insert into member (id,first_name,last_name, pw, student_id, phone, date, permit) values ('$id','$first_name','$last_name', '$pw','$student_id','$phone', '$date', 0)";
 
 $result1 = $connect->query($query1);
 
