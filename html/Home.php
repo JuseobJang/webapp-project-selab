@@ -94,8 +94,12 @@
         $id = $_SESSION['id'];
         $phone = $_SESSION['phone'];
         $student_id = $_SESSION['student_id'];
+        $permit = $_SESSION['permit'];
         echo "<p>HELLO! <strong>$id</strong> <a href=\"../login/logout.php\">로그아웃</a></p> ";
-        ?>
+        if ($permit == 2) {
+          ?>
+        <div id="admin"><a href="admin.php">Admin Course</a></div>
+      <?php } ?>
       <div class='divider'></div>
 
       <div id="infos">

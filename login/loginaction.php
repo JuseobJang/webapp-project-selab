@@ -13,7 +13,7 @@ $query = "select * from member where id='$id'";
 $result = $connect->query($query);
 
 
-//아이디가 있다면 비밀번호 검사
+//아이디가 있다면 비밀번호 검사 
 if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_assoc($result);
 
@@ -22,7 +22,8 @@ if (mysqli_num_rows($result) == 1) {
         $_SESSION['id'] = $id;
         if (isset($_SESSION['id'])) {
             $_SESSION['student_id'] = $row['student_id'];
-            $_SESSION['phone'] = $row['phone']; ?> <script>
+            $_SESSION['phone'] = $row['phone'];
+            $_SESSION['permit'] = $row['permit']; ?> <script>
                 alert("로그인 되었습니다.");
                 location.replace("../html/Home.php");
             </script>

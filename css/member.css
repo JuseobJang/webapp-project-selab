@@ -33,7 +33,7 @@
   text-align: center;
 }
 
-#member p:not(a):hover{
+#member p:hover{
   font-weight: bolder;
 }
 
@@ -64,4 +64,23 @@
   border-bottom: 1px solid rgb(167, 161, 160);
   clear: both;
   margin-top: 30px;
+}
+
+#member #admin {
+  margin-left: 34%;
+  margin-right: 34%;
+  width: 30%;
+  text-align: center;
+  padding: 1%;
+}
+
+
+
+#member #admin a:hover {
+  font-weight: bolder;
+  box-shadow: none;
+}
+
+#member #admin a{
+  color:crimson;
 }
