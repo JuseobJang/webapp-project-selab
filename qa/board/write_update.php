@@ -42,8 +42,40 @@ if(isset($bNo)) {
 
 //글 등록
 } else {
+	
 	$sql = 'insert into board_free (b_no, b_title, b_content, b_date, b_hit, b_id, b_password) values(null, "' . $bTitle . '", "' . $bContent . '", "' . $date . '", 0, "' . $bID . '", password("' . $bPassword . '"))';
-	$msgState = 'Post';
+	$msgState = ' 등록 되었';
+	if(empty($bID)){
+		?>
+		<script>
+			alert("아이디를 입력해주세요");
+			history.back();
+		</script>
+
+		<?php
+		exit;
+	}
+
+	if(empty($bPassword)){
+		?>
+		<script>
+			alert("비밀번호을 입력해주세요");
+			history.back();
+		</script>
+		<?php
+		exit;
+	}
+
+	if(empty($bTitle)){
+		?>
+		<script>
+			alert("제목을 입력해주세요");
+			history.back();
+		</script>
+		<?php
+		exit;
+	}
+
 }
 
 //메시지가 없다면 (오류가 없다면)
@@ -52,13 +84,13 @@ if(empty($msg)) {
 
 	//쿼리가 정상 실행 됐다면,
 	if($result) {
-		$msg = 'Successfully ' . $msgState .'ed';
+		$msg = '글이' . $msgState .'습니다.';
 		if(empty($bNo)) {
 			$bNo = $db->insert_id;
 		}
 		$replaceURL = './view.php?bno=' . $bNo;
 	} else {
-		$msg = 'Your' . $msgState . 'Rejected';
+		$msg = '글' . $msgState . '이 취소되었습니다.';
 ?>
 		<script>
 			alert("<?php echo $msg?>");

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	require_once('../dbconfig.php');
 
 	$w = '';
@@ -22,10 +22,37 @@
 	}
 
 	if(empty($w) || $w === 'w') { //$w 변수가 비어있거나 w인 경우
-		$msg = 'post';
+		$msg = '작성';
+		
 		$sql = 'insert into comment_free values(null, ' .$bNo . ', ' . $coNo . ', "' . $coContent . '", "' . $coId . '", password("' . $coPassword . '"))';
-
-
+		if(empty($coId)){
+			?>
+			<script>
+				alert("아이디를 입력해주세요")
+				history.back();
+			</script>
+		<?php	
+			exit;
+		}
+		if(empty($coPassword)){
+			?>
+			<script>
+				alert("비밀번호를 입력해주세요")
+				history.back();
+			</script>
+		<?php	
+			exit;
+		}
+		if(empty($coContent)){
+			?>
+			<script>
+				alert("내용을 입력해주세요")
+				history.back();
+			</script>
+		<?php	
+			exit;
+		}
+		
 		if(empty($w)) { //$w 변수가 비어있는경우
 			$result = $db->query($sql);
 
@@ -34,7 +61,7 @@
 		}
 
 	} else if($w === 'u') { // 작성
-		$msg = 'Modify';
+		$msg = '수정';
 
 		$sql = 'select count(*) as cnt from comment_free where co_password=password("' . $coPassword . '") and co_no = ' . $coNo;
 		$result = $db->query($sql);
@@ -43,7 +70,7 @@
 		if(empty($row['cnt'])) { //맞는 결과가 없을 경우 종료
 ?>
 			<script>
-				alert('Password Incorrect');
+				alert('비밀번호가 다릅니다.');
 				history.back();
 			</script>
 <?php
@@ -53,7 +80,7 @@
 		$sql = 'update comment_free set co_content = "' . $coContent . '" where co_password=password("' . $coPassword . '") and co_no = ' . $coNo;
 
 	} else if($w === 'd') { //삭제
-		$msg = 'Delete';
+		$msg = '삭제';
 		$sql = 'select count(*) as cnt from comment_free where co_password=password("' . $coPassword . '") and co_no = ' . $coNo;
 
 		$result = $db->query($sql);
@@ -62,7 +89,7 @@
 		if(empty($row['cnt'])) { //맞는 결과가 없을 경우 종료
 ?>
 			<script>
-				alert('Password Incorrect');
+				alert('비밀번호가 다릅니다.');
 				history.back();
 			</script>
 <?php
@@ -73,7 +100,7 @@
 	} else {
 ?>
 		<script>
-			alert('Please Use Regular Path');
+			alert('정상적인 경로를 이용해주세요.');
 			history.back();
 		</script>
 <?php
@@ -84,14 +111,14 @@
 	if($result) {
 ?>
 		<script>
-			alert('comment successfully <?php echo $msg?>d');
+			alert('댓글 <?php echo $msg?> 되었습니다.');
 			location.replace("./view.php?bno=<?php echo $bNo?>");
 		</script>
 <?php
 	} else {
 ?>
 		<script>
-			alert('comment <?php echo $msg?>ed failed');
+			alert('댓글 <?php echo $msg?>에 실패했습니다.');
 			history.back();
 		</script>
 <?php
