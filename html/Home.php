@@ -106,7 +106,7 @@
 
       <div id="infos">
         <div class="info">
-          <p>Name : <?php echo "$fir_name"."$last_name" ?></p>
+          <p>Name : <?php echo "$first_name"."$last_name" ?></p>
         </div>
         <div class="info">
           <p>phone : <?php echo "$phone" ?></p>
