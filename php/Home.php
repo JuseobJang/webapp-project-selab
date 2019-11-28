@@ -11,7 +11,7 @@
 
   <script type="text/javascript">
     function popOpen() {
-      var pop_url = "../html/signup.html";
+      var pop_url = "../html/signup.php";
       var pop_option = "width=400px, height= 640px, reizable=no, status=no, scrollbars=no";
       window.open(pop_url, "", pop_option);
     };
@@ -109,6 +109,9 @@
         else {
           $class_time = "THE 10:30~12:30 & FRI 14:30~16:00"; 
         }
+        $mid = $_SESSION['mid'];
+        $final = $_SESSION['final'];
+        $team = $_SESSION['team'];
         echo "<p>HELLO! <strong>$id</strong> <a href=\"../login/logout.php\">로그아웃</a></p> ";
         if ($permit == 2) {
           ?>
@@ -134,6 +137,16 @@
         </div> 
         <div class="info">
           <p>Class : <?php echo "$class_time" ?></p>
+        </div>
+        <div class="info">
+          <p>Mid Term : <?php echo "$mid" ?> points</p>
+        </div>
+        <div class="info">
+          <p>Final Term : <?php echo "$final" ?> points</p>
+        </div>
+        <div class="info">
+          <p>Team Project : <?php echo "$team" ?> points</p>
+        </div>
       </div>
     </div>
   <?php

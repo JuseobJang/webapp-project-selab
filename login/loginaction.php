@@ -28,6 +28,10 @@ if (mysqli_num_rows($result) == 1) {
             $_SESSION['last_name'] = $row['last_name'];
             $_SESSION['course'] = $row['course']; 
             $_SESSION['class_num'] = $row['class_num'];
+            $_SESSION['mid'] = $row['mid'];
+            $_SESSION['final'] = $row['final'];
+            $_SESSION['team'] = $row['team'];
+
             ?>
             <script>
                 alert("로그인 되었습니다.");

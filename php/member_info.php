@@ -36,10 +36,21 @@
         </div> 
         <div class="info">
           <p>Class : <?php echo $row["class_num"] ?></p>
-
-        <form action='member_info.php' method='POST'>
-            <button type='submit' name= 'primary' value='$primary'>info</button>
-        </form>
+        </div>
+        <div class="info">
+          <p>Course : <?php echo $row["mid"] ?></p>
+        </div> 
+        <div class="info">
+          <p>Course : <?php echo $row["final"] ?></p>
+        </div> 
+        <div class="info">
+          <p>Course : <?php echo $row["team"] ?></p>
+        </div> 
+      <?php
+        echo "<form action='input_grade.php' method='POST'>
+            <button type='submit' name= 'input_grade' value='$primary'>input grade</button>
+        </form>"
+        ?>
     </div>
 
       
