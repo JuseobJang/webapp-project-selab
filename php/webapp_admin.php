@@ -35,9 +35,6 @@
         echo '</table>';
 
         ?>
-        <form action='member_info.php' method='POST'>
-            <button type='submit' name='primary' value='$primary'>info</button>
-        </form>
     </div>
 </body>
 
