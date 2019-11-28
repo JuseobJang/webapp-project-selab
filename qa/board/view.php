@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php
 	require_once("../dbconfig.php");
 	$bNo = $_GET['bno'];
@@ -34,27 +35,34 @@
 </head>
 <body>
 <nav>
-    <a href="../../html/Home.php"><img src="../../images/selab.png" align="center" width="72" height="26"></a>
+    <a href="../../php/Home.php"><img src="../../images/selab.png" align="center" width="72" height="26"></a>
     <ul>
-      <li><a href="../../html/Contact.html">Contact</a></li>
-      <li><a href="./index.php">Q & A</a></li>
-      <li><a href="../../html/Courses.html">Courses</a>
+      <li><a href="../../php/Contact.php">Contact</a></li>
+      <li>
+        <?php if (isset($_SESSION['id'])){ ?> 
+          <a href="./index.php">Q & A</a>
+        <?php }
+         else{ ?> 
+          <a onClick = "alert('로그인 해주세요.')" >Q & A</a> 
+          <?php }?>
+      </li>
+      <li><a href="../../php/Courses.php">Courses</a>
         <ul>
-          <li><a href="../../html/Course_home.html">Home</a></li>
-          <li><a href="../../html/Course_slides.html">Slides</a></li>
+          <li><a href="../../php/Course_home.php">Home</a></li>
+          <li><a href="../../php/Course_slides.php">Slides</a></li>
         </ul>
       </li>
-      <li><a href="../../html/Publications.html">Publications</a>
+      <li><a href="../../php/Publications.php">Publications</a>
         <ul>
-          <li><a href="../../html/Pub_incon.html">International Conference</a></li>
-          <li><a href="../../html/Pub_injour.html">International Journal</a></li>
-          <li><a href="../../html/Pub_domcon.html">Domestic Conference</a></li>
-          <li><a href="../../html/Pub_domjour.html">Domestic Journal</a></li>
+          <li><a href="../../php/Pub_incon.php">International Conference</a></li>
+          <li><a href="../../php/Pub_injour.php">International Journal</a></li>
+          <li><a href="../../php/Pub_domcon.php">Domestic Conference</a></li>
+          <li><a href="../../php/Pub_domjour.php">Domestic Journal</a></li>
         </ul>
       </li>
-      <li><a href="../../html/Research.html">Research</a></li>
-      <li><a href="../../html/Members.html">Members</a></li>
-      <li><a href="../../html/Notice.html">Notice</a></li> 
+      <li><a href="../../php/Research.php">Research</a></li>
+      <li><a href="../../php/Members.php">Members</a></li>
+      <li><a href="../../php/Notice.php">Notice</a></li> 
     </ul>
   </nav>
 	
