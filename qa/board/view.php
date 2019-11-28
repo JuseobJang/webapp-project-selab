@@ -2,7 +2,7 @@
 <?php
 	require_once("../dbconfig.php");
 	$bNo = $_GET['bno'];
-
+	$db = mysqli_connect("localhost", "root", "root", "database", "8889") or die("fail");
 	if(!empty($bNo) && empty($_COOKIE['board_free_' . $bNo])) {
 		$sql = 'update board_free set b_hit = b_hit + 1 where b_no = ' . $bNo;
 		$result = $db->query($sql);
@@ -17,10 +17,10 @@
 			setcookie('board_free_' . $bNo, TRUE, time() + (60 * 60 * 24), '/');
 		}
 	}
-
-	$sql = 'select b_title, b_content, b_date, b_hit, b_id from board_free where b_no = ' . $bNo;
+	$sql = 'select * from board_free where b_no = ' . $bNo;
 	$result = $db->query($sql);
 	$row = $result->fetch_assoc();
+	$_SESSION['b_no'] = $row['b_no']
 ?>
 <!DOCTYPE html>
 <html>
@@ -69,6 +69,7 @@
 	<article class="boardArticle">
 		<h1>Q & A</h1>
 		<div id="boardView">
+
 			<h3 id="boardTitle"><?php echo $row['b_title']?></h3>
 			<div id="boardInfo">
 				<span id="boardID">Writer : <?php echo $row['b_id']?></span>
@@ -76,6 +77,13 @@
 				<span id="boardHit">View : <?php echo $row['b_hit']?></span>
 			</div>
 			<div id="boardContent"><?php echo $row['b_content']?></div>
+			<form action="like_action.php" method="POST">
+				<button type='submit' name='like' value='1'>LIKE</button>
+				<button type ='submit' name='like' value='0'>UNLIKE</button>
+			</form>
+			<span id="boardID">like : <?php echo $row['likes']?></span>
+			<span id="boardID">unlike : <?php echo $row['unlikes']?></span>
+
 			<div class="btnSet">
 				<a href="./write.php?bno=<?php echo $bNo?>">Modify</a>
 				<a href="./delete.php?bno=<?php echo $bNo?>">Delete</a>
