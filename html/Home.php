@@ -94,6 +94,14 @@
         $first_name = $_SESSION['first_name'];
         $last_name = $_SESSION['last_name'];
         $course = $_SESSION['course'];
+        $class = $_SESSION['class_num'];
+        $class_time;
+        if ($class == "1") {
+          $class_time = "THU 9:00~10:30 & FRI 13:00~14:30";
+        }
+        else {
+          $class_time = "THE 10:30~12:30 & FRI 14:30~16:00"; 
+        }
         echo "<p>HELLO! <strong>$id</strong> <a href=\"../login/logout.php\">로그아웃</a></p> ";
         if ($permit == 2) {
           ?>
@@ -117,6 +125,8 @@
         <div class="info">
           <p>Course : <?php echo "$course" ?></p>
         </div> 
+        <div class="info">
+          <p>Class : <?php echo "$class_time" ?></p>
       </div>
     </div>
   <?php
