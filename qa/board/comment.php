@@ -1,6 +1,6 @@
 <?php
 	$sql = 'select * from comment_free where co_no=co_order and b_no=' . $bNo;
-	$result = $db->query($sql);
+    $result = $db->query($sql);
 ?>
 <div id="commentView">
     <form action="comment_update.php" method="post">
@@ -10,22 +10,13 @@
 		?>
         <ul class="oneDepth">
             <!---1depth 댓글 출력--->
+            <!-- <?php $_SESSION['co_no'] = 1;?>  -->
             <li>
                 <div id="co_<?php echo $row['co_no']?>" class="commentSet">
                     <div class="commentInfo">
                         <div class="commentId">Name:
                             <span class="coId"><?php echo $row['co_id']?></span></div>
                         <div class="commentBtn">
-
-                            <form action="comment_like_action.php" method="POST">
-                                <button type='submit' name='c_likes' value='1'>LIKE</button>
-                                <button type='submit' name='c_dislikes' value='0'>UNLIKE</button>
-                            </form>
-
-                            <span id="boardID">like :
-                                <?php echo $row['c_likes']?></span>
-                            <span id="boardID">unlike :
-                                <?php echo $row['c_unlikes']?></span>
                             <a href="#" class="comt write">Comment</a>
                             <a href="#" class="comt modify">Modify</a>
                             <a href="#" class="comt delete">Delete</a>
@@ -62,7 +53,19 @@
         </ul>
         <?php } ?>
     </form>
+    <form action="comment_like_action.php" method="POST">
+    <button type='submit' name='c_likes' value='1'>LIKE</button>
+    <button type='submit' name='c_unlikes' value='0'>UNLIKE</button>
+    <?php 
+        $sql3 = 'select * from comment_free';
+        $result3 = $db ->query($sql3);
+        $row3 = $result3 ->fetch_assoc();
+    ?>
+    <span id="boardID">like : <?php echo $row3['c_likes']?></span>
+    <span id="boardID">unlike : <?php echo $row3['c_unlikes']?></span>
+    </form>
 </div>
+<hr>
 <form action="comment_update.php" method="post">
     <!------댓글 작성 폼 ------>
     <input type="hidden" name="bno" value="<?php echo $bNo?>">
