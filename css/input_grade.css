@@ -17,3 +17,55 @@ h2{
     color: gray;
     font-size: 25pt;
 }
+
+div p{
+    margin-top: 20px;
+    font-size: 19px;
+    font-family: 'Ubuntu';
+    color: black;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+h3{
+    font-size: 22px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    color: gray;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+input{
+    margin-left: 20px;
+}
+
+button{
+    background-color: rgb(241, 204, 123);
+    border: 2px solid #d3d3d3;
+    color:gray;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+  
+button:hover{
+    background: gray;
+    border-color: gray;
+    color: white;
+}
+
+.grade {
+    background-color: white;
+    border : 3px solid #d3d3d3;
+    overflow: solid;
+    min-width: 1000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div{
+    margin-bottom: 10px;
+}

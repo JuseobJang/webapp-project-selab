@@ -63,7 +63,7 @@
                 '<td>' . $row['student_id'] . '</td>' .
                 '<td>' . $row['class_num'] . '</td>' .
                 "<td> <form action='member_info.php' method='POST'>
-                    <button type='submit' name= 'primary' value='$primary'>info</button>
+                    <button type='submit' name= 'primary' value='$primary' style='height:30px; width:50px;'>info</button>
                 </form> </td>" .
                 '</tr>';
         }

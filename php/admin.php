@@ -44,9 +44,9 @@
 
     <h2>COURSE</h2>
 
-    <div id = "course_list">
+    <div id = "course_list"><br>
        <a href="webapp_admin.php">Web Application Development</a><br><br>
-       <a href="adva.php">Advanced Software Engineering</a>
+       <a href="adva.php">Advanced Software Engineering</a><br>
     </div>
 </body>
 </html>

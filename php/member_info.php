@@ -85,7 +85,7 @@
         </div> 
       <?php
         echo "<form action='input_grade.php' method='POST'>
-            <button type='submit' name= 'input_grade' value='$primary'>input grade</button>
+            <button type='submit' name= 'input_grade' value='$primary' style='height:35px; width:100px;'>input grade</button>
         </form>"
         ?>
     </div>

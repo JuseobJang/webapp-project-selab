@@ -44,7 +44,8 @@
   </header>
 
   <h2>MEMBER'S GRADE</h2>
-
+    <div class="grade">
+    <h3>Student_id :
     <?php
      $primary = $_POST['input_grade'];
      $connect = mysqli_connect("localhost", "root", "root", "database", "8889") or die("fail");
@@ -53,20 +54,18 @@
      $row = mysqli_fetch_array($result);
      echo $primary;
     ?>
-    
+    </h3>
+
     <div>
     <?php    
     echo "<form action='../login/grade_action.php' method = 'POST'>
-        <input type='number' name='mid' min='0' max='30'>    
-        <input type='number' name='final' min='0' max='30'>    
-        <input type='number' name='team' min='0' max='30'>    
-        <button type='submit' name ='primary' value = $primary>Modify</button>
-    </form>"
+        <p>Mid_Test</p><input type='number' name='mid' min='0' max='30'>   
+        <p>Final_Test</p><input type='number' name='final' min='0' max='30'>    
+        <p>Team_Project</p><input type='number' name='team' min='0' max='30'></form>"?></div></div>
 
-    ?>
-
-
-    </div>   
+    <?php
+    echo "<form action='../login/grade_action.php' method='POST'> <button type='submit' name ='primary' value = $primary style='height:30px; width:70px;'>Modify</button>
+    </form>"?>
     
     </body>
 </html>
