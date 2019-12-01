@@ -9,7 +9,7 @@
 
 <body>
 
-  <div align="center">
+  <div id="sign_up" align="center">
     <h2>SIGN UP</h2>
     <form method='POST' action='../login/signup_action.php'>
       <input type="text" name="first_name" placeholder="First name">

@@ -23,13 +23,7 @@
          else{ ?> 
           <a onClick = "alert('로그인 해주세요.')" >Q & A</a> 
           <?php }?>
-      </li>
-      <li><a href="Courses.php">Courses</a>
-        <ul>
-          <li><a href="Course_home.php">Home</a></li>
-          <li><a href="Course_slides.php">Slides</a></li>
-        </ul>
-      </li>
+      <li><a href="Courses.php">Courses</a></li>
       <li><a href="Publications.php">Publications</a>
         <ul>
           <li><a href="Pub_incon.php">International Conference</a></li>
@@ -117,14 +111,14 @@
         </tr>
         <tr class="white">
           <td id="ourcourse" <?php $course = $_SESSION['course'];
-           if($course == "Web Application Development") { ?> 
+           if($course == "Web Application Development" || $_SESSION['permit']==2) { ?> 
           onClick="location.href='Course_home.php'" <?php } 
           else{ ?> onClick= "alert('수강중인 강의가 아닙니다.')"
           <?php } ?>>CSE326</td>
 
           <td id="ourcourse" 
           <?php $course = $_SESSION['course'];
-            if($course == "Web Application Development") { ?> 
+            if($course == "Web Application Development" || $_SESSION['permit']==2) { ?> 
               onClick="location.href='Course_home.php'" <?php 
             } 
            else{ ?> 

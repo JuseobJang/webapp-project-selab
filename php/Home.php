@@ -8,13 +8,23 @@
   <link rel="stylesheet" href="../css/Home_layout.css">
   <link rel="stylesheet" href="../css/login.css">
   <link rel="stylesheet" href="../css/member.css">
-
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript">
     function popOpen() {
-      var pop_url = "../html/signup.php";
+      var pop_url = "../php/signup.php";
       var pop_option = "width=400px, height= 640px, reizable=no, status=no, scrollbars=no";
       window.open(pop_url, "", pop_option);
     };
+
+    function random(){
+      var code = generateRandom(1000, 9999)
+      $("#at").val(code);
+    }
+    
+    var generateRandom = function (min, max) {
+      var ranNum = Math.floor(Math.random()*(max-min+1)) + min;
+      return ranNum;
+}
   </script>
 
   <link href="https://fonts.googleapis.com/css?family=Abel|Farro|Lato|Roboto&display=swap" rel="stylesheet">
@@ -115,8 +125,16 @@
         echo "<p>HELLO! <strong>$id</strong> <a href=\"../login/logout.php\">로그아웃</a></p> ";
         if ($permit == 2) {
           ?>
+          <form action="../login/code.php" method="POST"> <input type="text" id="at" name = "code" readonly> <input type='button' onclick='random()' value='RANDOM'/>
+          <button type="submit" name="value" value = 1>CONFIRM</button>
+          <button type="submit" name="value" value = 0>STOP</button>
+        </form>
         <div id="admin"><a href="admin.php">Admin Course</a></div>
-      <?php } ?>
+      <?php } 
+        else { ?>
+          <form action="../login/code.php" method="POST"> <input type="number" name = "code" min=1000 max=9999> <button type="submit" >Attendance</button></form>
+      
+        <?php } ?>
       <div class='divider'></div>
 
       <div id="infos">
@@ -127,10 +145,16 @@
           <p>phone : <?php echo "$phone" ?></p>
         </div>
         <div class="info">
-          <p>Attendance :</p>
+          <?php 
+            $connect = mysqli_connect("localhost", "root", "root", "database", "8889") or die("fail");
+            $query = "select * from attendance where student_id='$student_id'";
+            $result = $connect->query($query);
+            $att_num = round(mysqli_num_rows($result) /12, 2) *100;
+          ?>
+          <p>Attendance : <?php echo "$att_num" ?>% </p> 
         </div>
         <div class="info">
-          <p>Student_id : <?php echo "$student_id" ?></p>
+          <p>Student_id : <?php echo "$student_id" ?> </p>
         </div>
         <div class="info">
           <p>Course : <?php echo "$course" ?></p>
