@@ -25,7 +25,7 @@
 		$msg = '작성';
 		
 		// $sql = "insert into comment_free (b_no,co_no,co_content,co_id,co_password) values ('$bNo','$coNo','$coContent','$coId','$coPassword')";
-		$sql = 'insert into comment_free values(null, ' .$bNo . ', ' . $coNo . ', "' . $coContent . '", "' . $coId . '", password("' . $coPassword . '"))';
+		$sql = 'insert into comment_free values(null, ' .$bNo . ', ' . $coNo . ', "' . $coContent . '", "' . $coId . '", password("'. $coPassword .'"),null,null)';
 
 		if(empty($coId)){
 			?>
