@@ -34,7 +34,6 @@ else {
     $result1 = $connect->query($query1);
 
     if(mysqli_num_rows($result)==0 || mysqli_num_rows($result1) > 0 ){
-    
     ?> <script>alert("출석시간이 종료 되었거나 코드가 잘 못 되었습니다.")</script>
     <?php
     }
