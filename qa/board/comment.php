@@ -53,17 +53,7 @@
         </ul>
         <?php } ?>
     </form>
-    <form action="comment_like_action.php" method="POST">
-    <button type='submit' name='c_likes' value='1'>LIKE</button>
-    <button type='submit' name='c_unlikes' value='0'>UNLIKE</button>
-    <?php 
-        $sql3 = 'select * from comment_free';
-        $result3 = $db ->query($sql3);
-        $row3 = $result3 ->fetch_assoc();
-    ?>
-    <span id="boardID">like : <?php echo $row3['c_likes']?></span>
-    <span id="boardID">unlike : <?php echo $row3['c_unlikes']?></span>
-    </form>
+    
 </div>
 <hr>
 <form action="comment_update.php" method="post">

@@ -83,6 +83,7 @@
 			</form>
 			<span id="boardID">like : <?php echo $row['likes']?></span>
 			<span id="boardID">unlike : <?php echo $row['unlikes']?></span>
+			
 
 			<div class="btnSet">
 				<a href="./write.php?bno=<?php echo $bNo?>">Modify</a>

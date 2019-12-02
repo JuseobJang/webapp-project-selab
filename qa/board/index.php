@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php
 	require_once("../dbconfig.php");
-
+	
 	/* 페이징 시작 */
 	//페이지 get 변수가 있으면 받아오고, 없으면 1페이지를 보여줌
 	if(isset($_GET['page'])) {
@@ -38,7 +38,6 @@
 	if(empty($allPost)) {
 		$emptyData = '<tr><td class="textCenter" colspan="5">Post not exist</td></tr>';
 	} else {
-
 		$onePage = 15; // 한 페이지에 보여줄 게시글의 수.
 		$allPage = ceil($allPost / $onePage); //전체 페이지의 수
 
@@ -149,6 +148,7 @@
       <li><a href="../../php/Research.php">Research</a></li>
       <li><a href="../../php/Members.php">Members</a></li>
       <li><a href="../../php/Notice.php">Notice</a></li> 
+	  <li><a href="myquestion.php">test</a></li> 
     </ul>
   </nav>
 

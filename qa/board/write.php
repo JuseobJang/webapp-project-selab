@@ -95,7 +95,10 @@
 				</table>
 				<div class="btnSet">
 					<button type="submit" class="btnSubmit btn">
-						<?php echo isset($bNo)?'Modify':'Write'?>
+						<?php echo isset($bNo)?'Modify':'Write' ?>
+						<?php $uid = $_SESSION['id']; ?>
+						<input type="hidden" name="UserId" value="<?php echo $uid?>" ;?/>
+						
 					</button>
 					<a href="./index.php" class="btnList btn">List</a>
 				</div>

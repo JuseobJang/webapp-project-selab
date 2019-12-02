@@ -35,7 +35,7 @@
 
 <body>
   <?php
-  error_reporting(E_ALL);
+  error_reporting(E_ALL); 
   ini_set('display_errors', '1');
   ?>
 
@@ -170,6 +170,9 @@
         </div>
         <div class="info">
           <p>Team Project : <?php echo "$team" ?> points</p>
+        </div>
+        <div class="info">
+          <p>My Question :<a href="../qa/board/myquestion.php"> 바로가기</a>  </p>
         </div>
       </div>
     </div>
