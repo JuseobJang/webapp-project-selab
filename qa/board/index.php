@@ -148,7 +148,6 @@
       <li><a href="../../php/Research.php">Research</a></li>
       <li><a href="../../php/Members.php">Members</a></li>
       <li><a href="../../php/Notice.php">Notice</a></li> 
-	  <li><a href="myquestion.php">test</a></li> 
     </ul>
   </nav>
 
