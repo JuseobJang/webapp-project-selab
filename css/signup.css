@@ -83,14 +83,6 @@
   margin-bottom: 10px;
 }
 
-.course input{
-  margin-left: 30px;
-}
-
-.time input{
-  margin-left: 10px;
-}
-
 .course p{
   margin-top: 0px;
   margin-bottom: -10px;
@@ -104,6 +96,6 @@
 p{
   font-size: 15px;
   color: gray;
-  font-weight: 300;
-  padding-top: 10px;
+  font-weight: 500;
+  padding-top: 15px;
 }

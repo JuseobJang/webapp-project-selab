@@ -45,7 +45,9 @@
     <h2>COURSE</h2>
 
     <div id = "course_list"><br>
+    <img src="../images/web.png" width="35" height="32" class="left">
        <a href="webapp_admin.php">Web Application Development</a><br><br>
+       <img src="../images/d.png" width="32" height="32" class="right">
        <a href="adva.php">Advanced Software Engineering</a><br>
     </div>
 </body>
