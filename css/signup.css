@@ -1,6 +1,6 @@
  body{
   width: 393px;
-  height: 600px;
+  height: 1225px;
   margin: 2% 1% 2% 1%;
   border-radius: 3px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, .96) 0%, rgba(255, 255, 250, .8) 65%);
@@ -55,4 +55,55 @@
 
   .button:hover {
   opacity: 85%;
+}
+
+.course{
+  width: 272px;
+  height: 230px;
+  background: rgba(233, 209, 136, 0.6);
+  border: none;
+  border-radius: 3px;
+  padding-left: 20px;
+  font-family: 'Ubuntu';
+  color: gray;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.time{
+  width: 272px;
+  height: 230px;
+  background: rgba(233, 209, 136, 0.6);
+  border: none;
+  border-radius: 3px;
+  padding-left: 20px;
+  font-family: 'Ubuntu';
+  color: gray;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.course input{
+  margin-left: 30px;
+}
+
+.time input{
+  margin-left: 10px;
+}
+
+.course p{
+  margin-top: 0px;
+  margin-bottom: -10px;
+}
+
+.time p{
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+p{
+  font-size: 15px;
+  color: gray;
+  font-weight: 300;
+  padding-top: 10px;
 }

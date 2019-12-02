@@ -60,3 +60,35 @@ section p{
 footer {
   width: 100%;
 }
+
+.member{
+
+}
+
+button{
+  background-color: rgb(241, 204, 123);
+  border: 2px solid #d3d3d3;
+  color:gray;
+  border-radius: 5px;
+  float: right;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+
+button:hover{
+  background: gray;
+  border-color: gray;
+  color: white;
+}
+
+#admin a{
+  float: left; 
+  margin-bottom: 10px;
+}
+
+#at{
+  margin-left: 100px;
+  margin-top: 20px;
+}
