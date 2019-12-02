@@ -42,3 +42,20 @@ h2{
     color: gray;
     font-size: 25pt;
 }
+
+.left{
+    float: left;
+    overflow: hidden;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 15px;
+}
+
+.right{
+    float: left;
+    overflow: hidden;
+    margin-left: 0px;
+    margin-top: -3px;
+    margin-right: 15px;
+    margin-left: 2px;
+}

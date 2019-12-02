@@ -25,7 +25,7 @@ a.scrollup i:hover {
 .table{
   border-collapse: collapse;
   border-top: solid white;
-  width: 66%;
+  width: 71%;
   border: none;
 }
 
@@ -37,7 +37,7 @@ a.scrollup i:hover {
 }
 
 .table th,.table td{
-  padding: 12px;
+  padding: 18px;
   border: 1px solid #ddd;
   text-align: center;
 }
@@ -101,6 +101,6 @@ section{
 .right{
   float: right;
   overflow: hidden;
-  margin-right:16px;
-  margin-top: 16px;
+  margin-right: 10px;
+  margin-top: 10px;
 }

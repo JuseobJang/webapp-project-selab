@@ -103,6 +103,7 @@
     </div>
   <?php } else { ?>
     <div id='member'>
+    <img src="../images/f.png" width="80" height="80" class="left">
       <?php
         $id = $_SESSION['id'];
         $phone = $_SESSION['phone'];

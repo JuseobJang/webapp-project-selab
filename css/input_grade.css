@@ -22,7 +22,8 @@ div p{
     margin-top: 20px;
     font-size: 19px;
     font-family: 'Ubuntu';
-    color: black;
+    color:gray;
+    font-weight: 500;
     margin-bottom: 5px;
     margin-left: 20px;
     font-weight: 400;
@@ -31,10 +32,11 @@ div p{
 h3{
     font-size: 22px;
     font-family: 'Ubuntu';
-    font-weight: 500;
-    color: gray;
-    margin-left: 20px;
-    margin-top: 10px;
+    color:black;
+    font-weight: 400;
+    margin-left: 60px;
+    margin-top: 15px;
+    margin-bottom: 30px;
 }
 
 input{
@@ -69,3 +71,11 @@ button:hover{
 div{
     margin-bottom: 10px;
 }
+
+.left{
+    float: left;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }

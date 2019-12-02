@@ -45,6 +45,7 @@
 
   <h2>MEMBER'S GRADE</h2>
     <div class="grade">
+    <img src="../images/f.png" width="35" height="32" class="left">
     <h3>Student_id :
     <?php
      $primary = $_POST['input_grade'];
