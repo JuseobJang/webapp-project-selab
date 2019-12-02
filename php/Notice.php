@@ -44,7 +44,7 @@
     <h1> NOTICE </h1>
   </header>
   <article>
-      <img src="../images/notice.png" width="360" height="255 " class="right">
+      <img src="../images/notice.png" width="300" height="217" class="right">
     <section> 
       <table class="table" border="1">
 
@@ -71,28 +71,6 @@
           <td>06 Mar 2014</td>
         </tr>
 
-
-        <tr>
-          <td colspan="6"><button>Write</button></td>
-        </tr>
-
-
-        <tr>
-          <td colspan="6">
-            <center>
-              <div class="page">
-                <a href="#">
-                  <<</a> <a href="#">1
-                </a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">>></a>
-              </div>
-            </center>
-          </td>
-        </tr>
 
 
       </table>
