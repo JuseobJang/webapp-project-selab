@@ -62,11 +62,12 @@
     echo "<form action='../login/grade_action.php' method = 'POST'>
         <p>Mid_Test</p><input type='number' name='mid' min='0' max='30'>   
         <p>Final_Test</p><input type='number' name='final' min='0' max='30'>    
-        <p>Team_Project</p><input type='number' name='team' min='0' max='30'></form>"?></div></div>
+        <p>Team_Project</p><input type='number' name='team' min='0' max='30'> <br>
+        <button type='submit' name ='primary' value = $primary style='height:30px; width:70px;'>Modify</button></form>"?></div></div>
 
     <?php
-    echo "<form action='../login/grade_action.php' method='POST'> <button type='submit' name ='primary' value = $primary style='height:30px; width:70px;'>Modify</button>
-    </form>"?>
+    // echo "<form action='../login/grade_action.php' method='POST'> <button type='submit' name ='primary' value = $primary style='height:30px; width:70px;'>Modify</button>
+    // </form>"?>
     
     </body>
 </html>
