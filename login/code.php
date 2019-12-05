@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-$connect = mysqli_connect("localhost", "root", "root", "database", "8889") or die("fail");
+$connect = mysqli_connect("localhost", "webapp", "webapp", "webapp", "3306") or die("fail");
 $at = $_POST['code'];
 $value = $_POST['value'];
 echo "$value";

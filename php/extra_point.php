@@ -48,7 +48,7 @@
     <h3>Student_id :
     <?php
      $primary = $_POST['extra_point'];
-     $connect = mysqli_connect("localhost", "root", "root", "database", "8889") or die("fail");
+     $connect = mysqli_connect("localhost", "webapp", "webapp", "webapp", "3306") or die("fail");
      $query = "select * from member where student_id = '$primary';";
      $result = $connect->query($query);
      $row = mysqli_fetch_array($result);
