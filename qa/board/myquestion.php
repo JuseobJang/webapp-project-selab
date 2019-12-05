@@ -13,14 +13,14 @@
 </head>
 <body>
     <p>My Question</p>
-    
+
 </body>
 
 <?php
     require_once("../dbconfig.php");
     $id = $_SESSION['id'];
 
-    $conn = mysqli_connect("localhost", "root", "root", "database");
+    $conn = mysqli_connect("localhost", "webapp", "webapp", "3306");
 
     $sql1 = 'SELECT * from board_free WHERE userid = ' . "'$id'";
     $result1 = mysqli_query($conn,$sql1);
@@ -52,8 +52,8 @@
             </tr>
         </tbody>
     </table>
-    
-    
+
+
     </tbody>
     </table>
 </div>
