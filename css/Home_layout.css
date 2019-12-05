@@ -61,36 +61,13 @@ footer {
   width: 100%;
 }
 
-button{
-  background-color: white;
-  border: 2px solid #d3d3d3;
-  color: gray;
-  font-weight: 600;
-  border-radius: 5px;
-  font-size: 13px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  float: right;
-  margin-right: 10px;
-}
 
-button:hover{
-  background: gray;
-  border-color: gray;
-  color: white;
-}
 
 #admin a{
   float: left; 
   margin-bottom: 10px;
   margin-left: 10px;
 }
-
-#at{
-  margin-left: 90px;
-  margin-top: 0px;
-}
-
 .left{
   float: left;
   overflow: hidden;
