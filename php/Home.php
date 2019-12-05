@@ -128,6 +128,25 @@
         $final = $_SESSION['final'];
         $team = $_SESSION['team'];
         $extra = $_SESSION['extra'];
+        $grade_point = $mid + $final + $team + $extra;
+        if ($grade_point >= 90) {
+          $grade = 'A+';
+        }
+        else if ($grade_point >= 80) {
+          $grade = 'A';
+        }
+        else if ($grade_point >= 70) {
+          $grade = 'B+';
+        }
+        else if ($grade_point >= 60) {
+          $grade = 'B';
+        }
+        else if ($grade_point >= 50) {
+          $grade = 'C+';
+        }
+        else {
+          $grade = 'F';
+        }
         echo "<p>HELLO! <strong>$id</strong> <a href=\"../login/logout.php\">로그아웃</a></p> ";
         if ($permit == 2) {
           ?>
@@ -181,6 +200,9 @@
           <div class="info">
             <p>Extra Point : <?php echo "$extra" ?> points</p>
           </div>
+          <div class="info">
+          <p>Grade : <?php echo "$grade" ?> </p>
+        </div>
           <div class="info">
             <p>My Question :<a href="javascript:popOpen2();"> 바로가기</a> </p>
           </div>

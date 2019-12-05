@@ -53,6 +53,25 @@
      $query = "select * from member where student_id = '$primary';";
      $result = $connect->query($query);
      $row = mysqli_fetch_array($result);
+     $grade_point = $row['mid'] + $row['final'] + $row['team'] + $row['extra'];
+        if ($grade_point >= 90) {
+          $grade = 'A+';
+        }
+        else if ($grade_point >= 80) {
+          $grade = 'A';
+        }
+        else if ($grade_point >= 70) {
+          $grade = 'B+';
+        }
+        else if ($grade_point >= 60) {
+          $grade = 'B';
+        }
+        else if ($grade_point >= 50) {
+          $grade = 'C+';
+        }
+        else {
+          $grade = 'F';
+        }
     ?>
 
     <div id="infos">
@@ -85,6 +104,9 @@
         </div> 
         <div class="info">
           <p>Extra Point : <?php echo $row["extra"] ?></p>
+        </div>
+        <div class="info">
+          <p>Grade : <?php echo $grade ?></p>
         </div>
       <?php
         echo "<form action='input_grade.php' method='POST'>
