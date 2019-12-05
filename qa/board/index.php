@@ -183,7 +183,12 @@
 						<tr>
 							<td class="no"><?php echo $row['b_no']?></td>
 							<td class="title">
-								<a href="./view.php?bno=<?php echo $row['b_no']?>"><?php echo $row['b_title']?></a>
+								<?php if(isset($_SESSION['id'])){ ?> 
+									<a href="./view.php?bno=<?php echo $row['b_no']?>"><?php echo $row['b_title']?></a>
+								<?php }
+								else {?>
+								<a href="#" onClick = "alert('로그인 해주세요.')" ><?php echo $row['b_title']?></a> 
+								<?php } ?>
 							</td>
 							<td class="author"><?php echo $row['b_id']?></td>
 							<td class="date"><?php echo $row['b_date']?></td>

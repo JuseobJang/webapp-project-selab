@@ -20,15 +20,15 @@
 .btnSet .btnWrite{ color: white;
 	font-size: 20px;
 	font-weight: 20;
-	padding:10px 37px 10px 37px;
-	border-radius: 10px;
+	padding:5px 15px 5px 15px;
+	border-radius: px;
 	border: 2px solid white;
-	background-color: rgb(241, 204, 123, 0.8);
+	background-color: gray;
 	text-decoration: none;
 	margin-right: 20px;}
 
 .btnSet .btnWrite:hover{
-	background-color: rgb(241, 204, 123, 0.4);
+	background-color: #d3d3d3;
 	border: 2px solid white;
 	text-decoration: none;}
 
@@ -36,11 +36,9 @@
 #boardList .paging li {display: inline-block; height: 20px; margin: 0 5px; padding: 0 5px; border: 1px solid #666; background: #eee; line-height: 21px;}
 #boardList .paging ul 
 #boardList .paging li.current,
-#boardList .paging li:hover {background: gray;}
+#boardList .paging li:hover {background: #d3d3d3;}
 #boardList .paging li.current,
-#boardList .paging li:hover a { color:black;background-color: rgb(241, 204, 123, 0.8);
-	border: 5px solid white;
-	text-decoration: none;}
+#boardList .paging li:hover a { color:black; background-color: #d3d3d3; text-decoration: none;}
 
 #boardList .searchBox{text-align: center;margin-right: 80px;}
 
@@ -64,7 +62,7 @@
 	font-weight: 20;
 	border-radius: 3px;
 	border: 1.5px solid #d3d3d3;
-	background-color: rgba(245, 222, 171, 0.1);
+	background-color: white;
 	text-decoration: none;
 }
 
@@ -73,15 +71,16 @@
 	font-size: 15px;
 	font-weight: 20;
 	padding:10px 37px 10px 37px;
-	border-radius: 10px;
+	border-radius: 5px;
 	border: 2px solid white;
-	background-color: rgb(241, 204, 123, 0.8);
+	background-color: gray;
 	text-decoration: none;
 	margin-top: 10px;
-	margin-right: 20px;}
+	margin-right: 20px;
+}
 
 #boardList .searchBox button:hover{
-	background-color: rgb(241, 204, 123, 0.4);
+	background-color: #d3d3d3;
 	border: 2px solid white;
 	text-decoration: none;
 }
