@@ -120,9 +120,9 @@
         $class = $_SESSION['class_num'];
         $class_time;
         if ($class == "1") {
-          $class_time = "THU 9:00~10:30 & FRI 13:00~14:30";
+          $class_time = "THU 9:00~10:30 ". "<br>" ."& FRI 13:00~14:30";
         } else {
-          $class_time = "THE 10:30~12:30 & FRI 14:30~16:00";
+          $class_time = "THU 10:30~12:30" . "<br>" ."& FRI 14:30~16:00";
         }
         $mid = $_SESSION['mid'];
         $final = $_SESSION['final'];
@@ -165,7 +165,7 @@
 
         <div id="infos">
           <div class="info">
-            <p>Name : <?php echo "$first_name" . "$last_name" ?></p>
+            <p>Name : <?php echo "$first_name" ." ". "$last_name" ?></p>
           </div>
           <div class="info">
             <p>phone : <?php echo "$phone" ?></p>
@@ -185,7 +185,7 @@
           <div class="info">
             <p>Course : <?php echo "$course" ?></p>
           </div>
-          <div class="info">
+          <div class="info" id="class">
             <p>Class : <?php echo "$class_time" ?></p>
           </div>
           <div class="info">

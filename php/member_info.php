@@ -76,7 +76,7 @@
 
     <div id="infos">
         <div class="info">
-          <p>Name : <?php echo $row["first_name"].$row['last_name'] ?></p>
+          <p>Name : <?php echo $row["first_name"]." ".$row['last_name'] ?></p>
         </div>
         <div class="info">
           <p>phone : <?php echo $row["phone"] ?></p>
