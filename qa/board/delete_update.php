@@ -19,7 +19,7 @@ if(isset($bNo)) {
 	if($row['cnt']) {
 		
 		$sql = 'delete from board_free where b_no = ' .$bNo;
-		
+		$sql1 = 'delete from comment_free where b_no = ' .$bNo;
 
 	//틀리다면 메시지 출력하고 이전화면
 	} else {
@@ -35,12 +35,13 @@ if(isset($bNo)) {
 }
 	$num = $bNo;
 	$result = $db->query($sql);
+	$result1 = $db->query($sql1);
 	$dltnum = 'update board_free set b_no = b_no - 1 where '.$num.' < b_no';
 	$db->query($dltnum);
 
 
 //쿼리가 정상 실행 되면
-if($result) {
+if($result||$result1) {
 	$msg = '글이 삭제 되었습니다.';
 	$replaceURL = './';
 } else {
