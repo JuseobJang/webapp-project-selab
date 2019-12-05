@@ -15,7 +15,7 @@
     <a href="Home.php"><img src="../images/selab.png" align="center" width="72" height="26"></a>
     <ul>
       <li><a href="Contact.php">Contact</a></li>
-      <li>h
+      <li>
         <?php if (isset($_SESSION['id'])){ ?> 
           <a href="../qa/board/index.php">Q & A</a>
         <?php }
@@ -106,7 +106,7 @@
           <p>Extra Point : <?php echo $row["extra"] ?></p>
         </div>
         <div class="info">
-          <p>Expected lGrade : <?php echo $grade ?></p>
+          <p>Expected Grade : <?php echo $grade ?></p>
         </div>
       <?php
         echo "<form action='input_grade.php' method='POST'>
