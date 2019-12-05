@@ -16,6 +16,8 @@
 #boardList .btnSet
 
 #boardList .paging {text-align: center;}
+#boardList .paging ul {margin-left:590px;}
+
 #boardList .paging li {display: inline-block; height: 20px; margin: 0 5px; padding: 0 5px; border: 1px solid #666; background: #eee; line-height: 21px;}
 
 #boardList .paging li.current,
@@ -23,7 +25,7 @@
 #boardList .paging li.current,
 #boardList .paging li:hover a { color: #ddd;}
 
-#boardList .searchBox{text-align: center;}
+#boardList .searchBox{text-align: center; margin-right:80px;}
 #boardList{
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
