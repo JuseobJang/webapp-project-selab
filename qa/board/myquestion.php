@@ -20,7 +20,7 @@
     require_once("../dbconfig.php");
     $id = $_SESSION['id'];
 
-    $conn = mysqli_connect("localhost", "webapp", "webapp", "3306");
+    $conn = mysqli_connect("localhost","webapp" ,"webapp", "webapp", "3306");
 
     $sql1 = 'SELECT * from board_free WHERE userid = ' . "'$id'";
     $result1 = mysqli_query($conn,$sql1);
