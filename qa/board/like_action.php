@@ -1,7 +1,7 @@
-<?php 
+<?php
 session_start();
 
-$connect = mysqli_connect("localhost", "root", "root", "database", "8889") or die("fail");
+$connect = mysqli_connect("localhost", "webapp", "webapp", "webapp", "3306") or die("fail");
 
 $value = $_POST['like'];
 $b_no = $_SESSION['b_no'];
@@ -32,7 +32,7 @@ if (mysqli_num_rows($result2) == 1) {
         $likes = $likes +1;
         $query1 = "update board_free set likes = $likes where b_no='$b_no'";
         $result1 = $connect->query($query1);
-        
+
         $query3 = 'INSERT INTO like_list(ID, b_no) values("'. $id .'" , "'.$b_no.'")';
         $result3 = $connect->query($query3);
 
@@ -52,4 +52,3 @@ header("location: view.php?bno='$b_no'");
 
 
 ?>
-

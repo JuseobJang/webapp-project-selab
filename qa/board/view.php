@@ -2,7 +2,7 @@
 <?php
 	require_once("../dbconfig.php");
 	$bNo = $_GET['bno'];
-	$db = mysqli_connect("localhost", "root", "root", "database", "8889") or die("fail");
+	$db = mysqli_connect("localhost", "webapp", "webapp", "webapp", "3306") or die("fail");
 	if(!empty($bNo) && empty($_COOKIE['board_free_' . $bNo])) {
 		$sql = 'update board_free set b_hit = b_hit + 1 where b_no = ' . $bNo;
 		$result = $db->query($sql);
@@ -39,11 +39,11 @@
     <ul>
       <li><a href="../../php/Contact.php">Contact</a></li>
       <li>
-        <?php if (isset($_SESSION['id'])){ ?> 
+        <?php if (isset($_SESSION['id'])){ ?>
           <a href="./index.php">Q & A</a>
         <?php }
-         else{ ?> 
-          <a onClick = "alert('로그인 해주세요.')" >Q & A</a> 
+         else{ ?>
+          <a onClick = "alert('로그인 해주세요.')" >Q & A</a>
           <?php }?>
       </li>
       <li><a href="../../php/Courses.php">Courses</a>
@@ -62,10 +62,10 @@
       </li>
       <li><a href="../../php/Research.php">Research</a></li>
       <li><a href="../../php/Members.php">Members</a></li>
-      <li><a href="../../php/Notice.php">Notice</a></li> 
+      <li><a href="../../php/Notice.php">Notice</a></li>
     </ul>
   </nav>
-	
+
 	<article class="boardArticle">
 		<h1>Q & A</h1>
 		<div id="boardView"><p>Question</p>
@@ -83,7 +83,7 @@
 			</form>
 			<span id="boardID">like : <?php echo $row['likes']?></span>
 			<span id="boardID">unlike : <?php echo $row['unlikes']?></span>
-			
+
 
 			<div class="btnSet">
 				<a href="./write.php?bno=<?php echo $bNo?>">Modify</a>
