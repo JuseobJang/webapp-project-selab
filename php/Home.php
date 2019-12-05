@@ -110,10 +110,6 @@
     <div id='member'>
       <img src="../images/f.png" width="80" height="80" class="left">
       <?php
-        $connect = mysqli_connect("localhost", "webapp", "webapp", "webapp", "3306") or die("fail");
-        $query = "select * from attendance where student_id='$student_id'";
-        $result = $connect->query($query);
-        $att_num = round(mysqli_num_rows($result) / 12, 2) * 100;
         $id = $_SESSION['id'];
         $phone = $_SESSION['phone'];
         $student_id = $_SESSION['student_id'];
@@ -132,6 +128,10 @@
         $final = $_SESSION['final'];
         $team = $_SESSION['team'];
         $extra = $_SESSION['extra'];
+        $connect = mysqli_connect("localhost", "webapp", "webapp", "webapp", "3306") or die("fail");
+        $query = "select * from attendance where student_id='$student_id'";
+        $result = $connect->query($query);
+        $att_num = round(mysqli_num_rows($result) / 12, 2) * 100;
         $grade_point = $mid + $final + $team + $extra + ($att_num / 10);
         if ($grade_point >= 90) {
           $grade = 'A+';
