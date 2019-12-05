@@ -83,14 +83,18 @@
         <div class="info">
           <p>Course : <?php echo $row["team"] ?></p>
         </div> 
+        <div class="info">
+          <p>Extra Point : <?php echo $row["extra"] ?></p>
+        </div>
       <?php
         echo "<form action='input_grade.php' method='POST'>
             <button type='submit' name= 'input_grade' value='$primary' style='height:35px; width:100px;'>input grade</button>
-        </form>"
+        </form>";
+        echo "<form action='extra_point.php' method='POST'>
+            <button type='submit' name= 'extra_point' value='$primary' style='height:35px; width:100px;'>extra point</button>
+        </form>";
         ?>
     </div>
 
-      
-        
     </body>
 </html>
