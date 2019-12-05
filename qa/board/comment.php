@@ -59,6 +59,7 @@
 <form action="comment_update.php" method="post">
     <!------댓글 작성 폼 ------>
     <input type="hidden" name="bno" value="<?php echo $bNo?>">
+    <p>Your Answer</p>
     <table>
         <tbody>
             <tr>
@@ -82,10 +83,9 @@
                 </td>
             </tr>
         </tbody>
+        <div class="cobtnSet">
+        <input type="submit" value="comment write"></div>
     </table>
-    <div class="btnSet">
-        <input type="submit" value="comment write">
-    </div>
 </form>
 
 <script>

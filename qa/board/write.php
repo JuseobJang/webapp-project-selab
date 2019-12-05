@@ -66,6 +66,7 @@
 				}
 				?>
 				<table id="boardWrite">
+					<p>Your Writing</p>
 					<caption class="readHide"></caption>
 					<tbody>
 						<tr>
