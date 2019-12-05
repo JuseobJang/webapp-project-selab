@@ -163,15 +163,22 @@
 /* 글읽기 */
 #boardView {float: left; width: 900px; margin-left: 20%}
 #boardView #boardTitle {border-bottom: 2px solid #333; font-size: 20px;}
-#boardView #boardInfo {margin: 20px 0;}
-#boardView #boardContent {margin: 10px 0;
-	background-color: #d3d3d3;}
-#boardView .btnSet {text-align: right;
+#boardView #boardInfo {margin: 20px 0; font-size: 18px; color:gray; font-weight: 500;}
+#boardView #boardContent {margin: 10px 0; font-size: 18px;}
+#boardView .btnSet {text-align: right;}
+
+#boardView button{
+	padding: 40px;
+	background-image: url(../images/like.png);
+	margin-top: 20px;
+	height: 40px;
+	width: 40px;
 }	
+
 
 #boardView .btnSet a{
 color: white;
-font-size: 20px;
+font-size: 218x;
 font-weight: 20;
 padding:5px 15px 5px 15px;
 border-radius: px;
@@ -181,10 +188,11 @@ text-decoration: none;}
 
 #boardView p{
 	font-size: 40px;
+	font-weight: 200;
 }
 
 	/* 댓글 쓰기*/
-	#boardComment table {width: 70%; float:left;}
+	#boardComment table {width: 80%; float:left;}
 	#boardComment table th {width: 100px; padding: 0 5px; text-align: right; vertical-align: middle;}
 	#boardComment table td {padding: 5px; text-align: left;}
 
@@ -209,6 +217,21 @@ text-decoration: none;}
 		float: right;
 		margin-bottom: 500px;
 	}
+
+	.cobtnSet input{ color: white;
+		font-size: 18px;
+		font-weight: 20;
+		padding:5px 15px 5px 15px;
+		border-radius: px;
+		border: 2px solid white;
+		background-color: gray;
+		text-decoration: none;
+		margin-right: px;}
+	
+	.cobtnSet input:hover{
+		background-color: #d3d3d3;
+		border: 2px solid white;
+		text-decoration: none;}
 
 /* 글삭제 */
 
