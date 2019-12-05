@@ -96,6 +96,11 @@
   /* margin-left: 20%; */
 }
 
+#member #class p {
+  height: 45px;
+}
+
+
 
 
 
@@ -143,4 +148,8 @@
   border-color: gray;
   color: white;
   transition: 0.5s;
+}
+
+#at_button {
+  width: 100px;
 }
