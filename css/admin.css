@@ -32,6 +32,8 @@ div a:hover{
     color:#ffffff;
     text-decoration: none;
     border-radius: 10px;
+    transition: 0.5s;
+
 }
 
 h2{

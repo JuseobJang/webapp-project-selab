@@ -43,6 +43,8 @@ button:hover{
   background: gray;
   border-color: gray;
   color: white;
+  transition: 0.5s;
+
 }
 
 #infos{

@@ -99,8 +99,7 @@
 
 
 
-#at_input,
-#at_output {
+#at_input{
   width: 100px;
   height: 30px;
   background: rgba(233, 209, 136, 0.6);
@@ -111,27 +110,37 @@
   font-family: 'Ubuntu';
   color: rgb(0, 0, 0);
   margin-bottom: 10px;
-}
-
-
-#at_input {
   margin-left: 12%;
+
 }
 
-/* #member form button{
-  overflow: left;
-} */
+#at_output{
+  margin-bottom: 5%;
+  width: 80%;
+  height: 80px;
+  font-size: 96px;
+  padding-left: 22%;
+  background: none;
+  border: none;
+}
+
+
+
 
 .at_button {
   /* border: hotpink 1px solid; */
-  height: 30px;
-  border: none;
-  border-radius: 10px;
-  font-family: 'Ubuntu';
-  background-color: rgb(241, 241, 146);
-  font-weight: bolder;
+  background-color: rgb(241, 204, 123);
+  border: 2px solid #d3d3d3;
+  color: gray;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 90px;
+  margin-left: 2%;
 }
 
 .at_button:hover {
-  opacity: 0.4;
-  transition: 0.5s ;
+  background: gray;
+  border-color: gray;
+  color: white;
+  transition: 0.5s;
+}
