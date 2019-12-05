@@ -31,7 +31,7 @@ if (mysqli_num_rows($result) == 1) {
             $_SESSION['mid'] = $row['mid'];
             $_SESSION['final'] = $row['final'];
             $_SESSION['team'] = $row['team'];
-
+            $_SESSION['extra'] = $row['extra'];
             ?>
             <script>
                 alert("로그인 되었습니다.");

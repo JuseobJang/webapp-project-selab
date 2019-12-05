@@ -129,6 +129,7 @@
         $mid = $_SESSION['mid'];
         $final = $_SESSION['final'];
         $team = $_SESSION['team'];
+        $extra = $_SESSION['extra'];
         echo "<p>HELLO! <strong>$id</strong> <a href=\"../login/logout.php\">로그아웃</a></p> ";
         if ($permit == 2) {
           ?>

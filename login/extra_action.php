@@ -3,15 +3,21 @@
     
     $primary = $_POST['primary'];
 
-    $query = "select * from member where id='$primary'";
+    $query = "select * from member where student_id='$primary'";
     $result = $connect->query($query);
     $row = mysqli_fetch_assoc($result);
+    $extra = $_POST['extra'];
 
-    if ($row['extra'] < 10) {
-        $extra = $_POST['extra'];
+    if ($row['extra'] + $extra > 10) {
     
-        $query1 = "update member SET extra = extra + $extra where student_id='$primary'";
+        $query1 = "update member SET extra = 10 where student_id='$primary'";
         $result1 = $connect->query($query1);
+    
+        mysqli_close($connect);
+    }
+    else {
+        $query2 = "update member SET extra = extra + $extra where student_id='$primary'";
+        $result2 = $connect->query($query2);
     
         mysqli_close($connect);
     }
