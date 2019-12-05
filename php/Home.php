@@ -179,6 +179,9 @@
           <p>Team Project : <?php echo "$team" ?> points</p>
         </div>
         <div class="info">
+          <p>Extra Point : <?php echo "$extra" ?> points</p>
+        </div>
+        <div class="info">
           <p>My Question :<a href="javascript:popOpen2();"> 바로가기</a>  </p>
         </div>
       </div>
