@@ -27,7 +27,7 @@ if(isset($bNo)) {
 	//비밀번호가 맞으면 업데이트 쿼리
 	if($row['cnt']) {
 		$sql = 'update board_free set b_title="' . $bTitle . '", b_content="' . $bContent . '" where b_no = ' . $bNo;
-		$msgState = 'Modifi';
+		$msgState = '수정';
 	//틀리면 메시지 출력하고 이전화면으로
 	} else {
 		$msg = 'Password Incorrect';

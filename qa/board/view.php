@@ -76,7 +76,7 @@
 				<span id="boardDate">Date : <?php echo $row['b_date']?></span>
 				<span id="boardHit">View : <?php echo $row['b_hit']?></span>
 			</div>
-			<div id="boardContent"><?php echo $row['b_content']?></div>
+			<div id="boardContent"><?php echo nl2br($row['b_content'])?></div>
 			<form action="like_action.php" method="POST">
 				<button type='submit' name='like' value='1'>LIKE</button>
 				<button type ='submit' name='like' value='0'>UNLIKE</button>
