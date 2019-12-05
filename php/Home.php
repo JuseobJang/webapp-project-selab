@@ -97,7 +97,7 @@
   </article>
   <?php if (!isset($_SESSION['id'])) { ?>
     <div id='login'>
-      <h2>SIGNUP</h2>
+      <h2>SIGNIN</h2>
       <form action="../login/loginaction.php" method="POST">
         <input name="id" type='text' placeholder='Username'>
         <input name="pw" type='password' placeholder='Password'>
@@ -133,58 +133,65 @@
           ?>
         <div id="admin"><a href="admin.php">Admin Course</a></div>
         <div class='divider'></div>
+        <br><br><br>
         <h3>Create Attendance Code</h3>
+        
         <form id="admin_at" action="../login/code.php" method="POST"> <input type="text" id="at_output" name="code" readonly> <input class="at_button" type='button' onclick='random()' value='RANDOM' />
           <button class="at_button" type="submit" name="value" value=1>CONFIRM</button>
           <button class="at_button" type="submit" name="value" value=0>STOP</button>
         </form>
       <?php } else { ?>
         <form action="../login/code.php" method="POST"> <input id="at_input" type="number" name="code" min=1000 max=9999 placeholder="input code"> <button class="at_button" id="at_button" type="submit">Attendance</button></form>
+        <div class='divider'></div>
+
+        <div id="infos">
+          <div class="info">
+            <p>Name : <?php echo "$first_name" . "$last_name" ?></p>
+          </div>
+          <div class="info">
+            <p>phone : <?php echo "$phone" ?></p>
+          </div>
+          <div class="info">
+            <?php
+                $connect = mysqli_connect("localhost", "root", "root", "database", "8889") or die("fail");
+                $query = "select * from attendance where student_id='$student_id'";
+                $result = $connect->query($query);
+                $att_num = round(mysqli_num_rows($result) / 12, 2) * 100;
+                ?>
+            <p>Attendance : <?php echo "$att_num" ?>% </p>
+          </div>
+          <div class="info">
+            <p>Student_id : <?php echo "$student_id" ?> </p>
+          </div>
+          <div class="info">
+            <p>Course : <?php echo "$course" ?></p>
+          </div>
+          <div class="info">
+            <p>Class : <?php echo "$class_time" ?></p>
+          </div>
+          <div class="info">
+            <p>Mid Term : <?php echo "$mid" ?> points</p>
+          </div>
+          <div class="info">
+            <p>Final Term : <?php echo "$final" ?> points</p>
+          </div>
+          <div class="info">
+            <p>Team Project : <?php echo "$team" ?> points</p>
+          </div>
+          <div class="info">
+            <p>Extra Point : <?php echo "$extra" ?> points</p>
+          </div>
+          <div class="info">
+            <p>My Question :<a href="javascript:popOpen2();"> 바로가기</a> </p>
+          </div>
+        </div>
+
+
+
+
 
       <?php } ?>
-      <div class='divider'></div>
 
-      <div id="infos">
-        <div class="info">
-          <p>Name : <?php echo "$first_name" . "$last_name" ?></p>
-        </div>
-        <div class="info">
-          <p>phone : <?php echo "$phone" ?></p>
-        </div>
-        <div class="info">
-          <?php
-            $connect = mysqli_connect("localhost", "root", "root", "database", "8889") or die("fail");
-            $query = "select * from attendance where student_id='$student_id'";
-            $result = $connect->query($query);
-            $att_num = round(mysqli_num_rows($result) / 12, 2) * 100;
-            ?>
-          <p>Attendance : <?php echo "$att_num" ?>% </p>
-        </div>
-        <div class="info">
-          <p>Student_id : <?php echo "$student_id" ?> </p>
-        </div>
-        <div class="info">
-          <p>Course : <?php echo "$course" ?></p>
-        </div>
-        <div class="info">
-          <p>Class : <?php echo "$class_time" ?></p>
-        </div>
-        <div class="info">
-          <p>Mid Term : <?php echo "$mid" ?> points</p>
-        </div>
-        <div class="info">
-          <p>Final Term : <?php echo "$final" ?> points</p>
-        </div>
-        <div class="info">
-          <p>Team Project : <?php echo "$team" ?> points</p>
-        </div>
-        <div class="info">
-          <p>Extra Point : <?php echo "$extra" ?> points</p>
-        </div>
-        <div class="info">
-          <p>My Question :<a href="javascript:popOpen2();"> 바로가기</a> </p>
-        </div>
-      </div>
     </div>
   <?php
   } ?>
