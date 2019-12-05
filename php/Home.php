@@ -16,15 +16,21 @@
       window.open(pop_url, "", pop_option);
     };
 
-    function random() {
+    function popOpen2() {
+      var pop_url = "../qa/board/myquestion.php";
+      var pop_option = "width=750px, height= 750px, reizable=no, status=no, scrollbars=no";
+      window.open(pop_url, "", pop_option);
+    };
+
+    function random(){
       var code = generateRandom(1000, 9999)
       $("#at").val(code);
     }
 
-    var generateRandom = function(min, max) {
-      var ranNum = Math.floor(Math.random() * (max - min + 1)) + min;
+    var generateRandom = function (min, max) {
+      var ranNum = Math.floor(Math.random()*(max-min+1)) + min;
       return ranNum;
-    }
+}
   </script>
 
   <link href="https://fonts.googleapis.com/css?family=Abel|Farro|Lato|Roboto&display=swap" rel="stylesheet">
@@ -44,11 +50,12 @@
     <ul>
       <li><a href="Contact.php">Contact</a></li>
       <li>
-        <?php if (isset($_SESSION['id'])) { ?>
+        <?php if (isset($_SESSION['id'])){ ?>
           <a href="../qa/board/index.php">Q & A</a>
-        <?php } else { ?>
-          <a onClick="alert('로그인 해주세요.')">Q & A</a>
-        <?php } ?>
+        <?php }
+         else{ ?>
+          <a onClick = "alert('로그인 해주세요.')" >Q & A</a>
+          <?php }?>
       </li>
       <li><a href="Courses.php">Courses</a>
       </li>
@@ -102,7 +109,7 @@
     </div>
   <?php } else { ?>
     <div id='member'>
-      <img src="../images/f.png" width="80" height="80" class="left">
+    <img src="../images/f.png" width="80" height="80" class="left">
       <?php
         $id = $_SESSION['id'];
         $phone = $_SESSION['phone'];
@@ -115,7 +122,8 @@
         $class_time;
         if ($class == "1") {
           $class_time = "THU 9:00~10:30 & FRI 13:00~14:30";
-        } else {
+        }
+        else {
           $class_time = "THE 10:30~12:30 & FRI 14:30~16:00";
         }
         $mid = $_SESSION['mid'];
@@ -124,22 +132,21 @@
         echo "<p>HELLO! <strong>$id</strong> <a href=\"../login/logout.php\">로그아웃</a></p> ";
         if ($permit == 2) {
           ?>
-        <div id="admin"><a href="admin.php">Admin Course</a></div>
-        <div class='divider'></div>
-         <h3>Create Attendance Code</h3> 
-        <form id="admin_at" action="../login/code.php" method="POST"> <input type="text" id="at_output" name="code" readonly> <input class="at_button" type='button' onclick='random()' value='RANDOM' />
-          <button class="at_button" type="submit" name="value" value=1>CONFIRM</button>
-          <button class="at_button" type="submit" name="value" value=0>STOP</button>
+          <form action="../login/code.php" method="POST"> <input type="text" id="at" name = "code" readonly> <input type='button' onclick='random()' value='RANDOM'/>
+          <button type="submit" name="value" value = 1>CONFIRM</button>
+          <button type="submit" name="value" value = 0>STOP</button>
         </form>
-      <?php } else { ?>
-        <form action="../login/code.php" method="POST"> <input id="at_input" type="number" name="code" min=1000 max=9999 placeholder="input code"> <button class="at_button" id="at_button" type="submit">Attendance</button></form>
+        <div id="admin"><a href="admin.php">Admin Course</a></div>
+      <?php }
+        else { ?>
+          <form action="../login/code.php" method="POST"> <input type="number" name = "code" min=1000 max=9999> <button type="submit" >Attendance</button></form>
 
-      <?php } ?>
+        <?php } ?>
       <div class='divider'></div>
 
       <div id="infos">
         <div class="info">
-          <p>Name : <?php echo "$first_name" . "$last_name" ?></p>
+          <p>Name : <?php echo "$first_name"."$last_name" ?></p>
         </div>
         <div class="info">
           <p>phone : <?php echo "$phone" ?></p>
@@ -149,8 +156,8 @@
             $connect = mysqli_connect("localhost", "root", "root", "database", "8889") or die("fail");
             $query = "select * from attendance where student_id='$student_id'";
             $result = $connect->query($query);
-            $att_num = round(mysqli_num_rows($result) / 12, 2) * 100;
-            ?>
+            $att_num = round(mysqli_num_rows($result) /12, 2) *100;
+          ?>
           <p>Attendance : <?php echo "$att_num" ?>% </p>
         </div>
         <div class="info">
@@ -172,12 +179,14 @@
           <p>Team Project : <?php echo "$team" ?> points</p>
         </div>
         <div class="info">
-          <p>My Question :<a href="../qa/board/myquestion.php"> 바로가기</a> </p>
+          <p>My Question :<a href="javascript:popOpen2();"> 바로가기</a>  </p>
         </div>
       </div>
     </div>
   <?php
   } ?>
+
+
 
 
 </body>

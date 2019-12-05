@@ -38,7 +38,7 @@
 	if(empty($allPost)) {
 		$emptyData = '<tr><td class="textCenter" colspan="5">Post not exist</td></tr>';
 	} else {
-		$onePage = 15; // 한 페이지에 보여줄 게시글의 수.
+		$onePage = 10; // 한 페이지에 보여줄 게시글의 수.
 		$allPage = ceil($allPost / $onePage); //전체 페이지의 수
 
 		if($page < 1 && $page > $allPage) {
@@ -69,9 +69,9 @@
 		$paging = '<ul>'; // 페이징을 저장할 변수
 
 		//첫 페이지가 아니면 처음 버튼을 만듬
-		if($page != 1) {
-			$paging .= '<li class="page page_start"><a href="./index.php?page=1' . $subString . '">1</a></li>';
-		}
+		// if($page != 1) {
+		// 	$paging .= '<li class="page page_start"><a href="./index.php?page=1' . $subString . '">1</a></li>';
+		// }
 		//첫 섹션이 아니라면 이전 버튼을 생성
 		if($currentSection != 1) {
 			$paging .= '<li class="page page_prev"><a href="./index.php?page=' . $prevPage . $subString . '">Previous</a></li>';
