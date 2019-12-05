@@ -161,6 +161,10 @@
         </form>
       <?php } else { ?>
         <form action="../login/code.php" method="POST"> <input id="at_input" type="number" name="code" min=1000 max=9999 placeholder="input code"> <button class="at_button" id="at_button" type="submit">Attendance</button></form>
+        <div class="slide-in-elliptic-left-fwd">
+          <?php echo "$grade" ?>
+        </div>
+        <p id="eg">expected grade</p>
         <div class='divider'></div>
 
         <div id="infos">
@@ -180,7 +184,7 @@
             <p>Attendance : <?php echo "$att_num" ?>% </p>
           </div>
           <div class="info">
-            <p>Student_id : <?php echo "$student_id" ?> </p>
+            <p>Student id : <?php echo "$student_id" ?> </p>
           </div>
           <div class="info">
             <p>Course : <?php echo "$course" ?></p>
@@ -200,9 +204,6 @@
           <div class="info">
             <p>Extra Point : <?php echo "$extra" ?> points</p>
           </div>
-          <div class="info">
-          <p>Grade : <?php echo "$grade" ?> </p>
-        </div>
           <div class="info">
             <p>My Question :<a href="javascript:popOpen2();"> 바로가기</a> </p>
           </div>
