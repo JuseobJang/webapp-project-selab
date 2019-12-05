@@ -15,7 +15,7 @@
     <a href="Home.php"><img src="../images/selab.png" align="center" width="72" height="26"></a>
     <ul>
       <li><a href="Contact.php">Contact</a></li>
-      <li>
+      <li>h
         <?php if (isset($_SESSION['id'])){ ?> 
           <a href="../qa/board/index.php">Q & A</a>
         <?php }
@@ -53,11 +53,30 @@
      $query = "select * from member where student_id = '$primary';";
      $result = $connect->query($query);
      $row = mysqli_fetch_array($result);
+     $grade_point = $row['mid'] + $row['final'] + $row['team'] + $row['extra'];
+        if ($grade_point >= 90) {
+          $grade = 'A+';
+        }
+        else if ($grade_point >= 80) {
+          $grade = 'A';
+        }
+        else if ($grade_point >= 70) {
+          $grade = 'B+';
+        }
+        else if ($grade_point >= 60) {
+          $grade = 'B';
+        }
+        else if ($grade_point >= 50) {
+          $grade = 'C+';
+        }
+        else {
+          $grade = 'F';
+        }
     ?>
 
     <div id="infos">
         <div class="info">
-          <p>Name : <?php echo $row["first_name"].$row['last_name'] ?></p>
+          <p>Name : <?php echo $row["first_name"]." ".$row['last_name'] ?></p>
         </div>
         <div class="info">
           <p>phone : <?php echo $row["phone"] ?></p>
@@ -66,7 +85,7 @@
           <p>Attendance :</p>
         </div>
         <div class="info">
-          <p>Student_id : <?php echo $row["student_id"] ?></p>
+          <p>Student id : <?php echo $row["student_id"] ?></p>
         </div>
         <div class="info">
           <p>Course : <?php echo $row["course"] ?></p>
@@ -85,6 +104,9 @@
         </div> 
         <div class="info">
           <p>Extra Point : <?php echo $row["extra"] ?></p>
+        </div>
+        <div class="info">
+          <p>Expected lGrade : <?php echo $grade ?></p>
         </div>
       <?php
         echo "<form action='input_grade.php' method='POST'>

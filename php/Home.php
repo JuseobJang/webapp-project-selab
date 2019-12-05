@@ -120,14 +120,33 @@
         $class = $_SESSION['class_num'];
         $class_time;
         if ($class == "1") {
-          $class_time = "THU 9:00~10:30 & FRI 13:00~14:30";
+          $class_time = "THU 9:00~10:30 ". "<br>" ."& FRI 13:00~14:30";
         } else {
-          $class_time = "THE 10:30~12:30 & FRI 14:30~16:00";
+          $class_time = "THU 10:30~12:30" . "<br>" ."& FRI 14:30~16:00";
         }
         $mid = $_SESSION['mid'];
         $final = $_SESSION['final'];
         $team = $_SESSION['team'];
         $extra = $_SESSION['extra'];
+        $grade_point = $mid + $final + $team + $extra;
+        if ($grade_point >= 90) {
+          $grade = 'A+';
+        }
+        else if ($grade_point >= 80) {
+          $grade = 'A';
+        }
+        else if ($grade_point >= 70) {
+          $grade = 'B+';
+        }
+        else if ($grade_point >= 60) {
+          $grade = 'B';
+        }
+        else if ($grade_point >= 50) {
+          $grade = 'C+';
+        }
+        else {
+          $grade = 'F';
+        }
         echo "<p>HELLO! <strong>$id</strong> <a href=\"../login/logout.php\">로그아웃</a></p> ";
         if ($permit == 2) {
           ?>
@@ -142,11 +161,15 @@
         </form>
       <?php } else { ?>
         <form action="../login/code.php" method="POST"> <input id="at_input" type="number" name="code" min=1000 max=9999 placeholder="input code"> <button class="at_button" id="at_button" type="submit">Attendance</button></form>
+        <div class="slide-in-elliptic-left-fwd">
+          <?php echo "$grade" ?>
+        </div>
+        <p id="eg">expected grade</p>
         <div class='divider'></div>
 
         <div id="infos">
           <div class="info">
-            <p>Name : <?php echo "$first_name" . "$last_name" ?></p>
+            <p>Name : <?php echo "$first_name" ." ". "$last_name" ?></p>
           </div>
           <div class="info">
             <p>phone : <?php echo "$phone" ?></p>
@@ -161,12 +184,12 @@
             <p>Attendance : <?php echo "$att_num" ?>% </p>
           </div>
           <div class="info">
-            <p>Student_id : <?php echo "$student_id" ?> </p>
+            <p>Student id : <?php echo "$student_id" ?> </p>
           </div>
           <div class="info">
             <p>Course : <?php echo "$course" ?></p>
           </div>
-          <div class="info">
+          <div class="info" id="class">
             <p>Class : <?php echo "$class_time" ?></p>
           </div>
           <div class="info">

@@ -26,13 +26,15 @@
       <br>
       <input type="text" name="phone" placeholder="Phone Number">
       <br>
-      <div class="course"><p>CLASS</p>
-      <input type="radio" name="course" value = "Web Application Development">Web Application Development
-      <input type="radio" name="course" value = "Advanced Software Engineering">Advanced Software Engineering
-      <br></div>
+      <div class="course"><p>COURSE</p>
+      <input class="radio" type="radio" name="course" value = "Web Application Development">Web Application Development
+      <br>
+      <input class="radio" type="radio" name="course" value = "Advanced Software Engineering">Advanced Software Engineering
+      </div>
       <div class="time"><p>CLASS TIME</p>
-      <input type="radio" name="class_num" value = "1"> THU 9:00~10:30 & FRI 13:00~14:30
-      <input type="radio" name="class_num" value = "2"> THU 10:30~12:00 & FRI 14:30~16:00
+      <input class="radio" type="radio" name="class_num" value = "1"> THU 9:00~10:30 & FRI 13:00~14:30
+      <br>
+      <input class="radio" type="radio" name="class_num" value = "2"> THU 10:30~12:00 & FRI 14:30~16:00
       </div>
       
 

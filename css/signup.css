@@ -1,101 +1,92 @@
- body{
-  width: 393px;
-  height: 1225px;
-  margin: 2% 1% 2% 1%;
-  border-radius: 3px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, .96) 0%, rgba(255, 255, 250, .8) 65%);
-  border-radius: 10px;
-  box-shadow: 1px 1px 10px rgb(174, 176, 167);
-}
+ body {
+   width: 393px;
+   height: 950px;
+   margin: 2% 1% 2% 1%;
+   border-radius: 3px;
+   background: linear-gradient(to bottom, rgba(255, 255, 255, .96) 0%, rgba(255, 255, 250, .8) 65%);
+   border-radius: 10px;
+   box-shadow: 1px 1px 10px rgb(174, 176, 167);
+ }
 
-  h2 {
-  min-width: inherit;
-  padding-top: 10%;
-  text-align: center;
-  font-weight: bolder;
-  letter-spacing: 4px;
-  padding: 30px 0 10px 0;
-}
+ h2 {
+   min-width: inherit;
+   padding-top: 10%;
+   text-align: center;
+   font-weight: bolder;
+   letter-spacing: 4px;
+   padding: 30px 0 10px 0;
+ }
 
-  input {
-  width: 292px;
-  height: 65px;
-  background: rgba(233, 209, 136, 0.6);
-  border: none;
-  border-radius: 3px;
-  padding-left: 20px;
-  font-family: 'Ubuntu';
-  color: rgb(0, 0, 0);
-  margin-bottom: 10px;
-}
+ input:not(.radio) {
+   width: 292px;
+   height: 65px;
+   background: rgba(233, 209, 136, 0.6);
+   border: none;
+   border-radius: 3px;
+   padding-left: 20px;
+   font-family: 'Ubuntu';
+   color: rgb(0, 0, 0);
+   margin-bottom: 10px;
+ }
 
-  .divider {
-  width: 100%;
-  height: 1px;
-  background: rgb(207, 212, 208);
-  border-bottom: 1px solid rgb(167, 161, 160);
-  clear: both;
-  margin-top: 30px;
-}
+ .divider {
+   width: 100%;
+   height: 1px;
+   background: rgb(207, 212, 208);
+   border-bottom: 1px solid rgb(167, 161, 160);
+   clear: both;
+   margin-top: 30px;
+ }
 
-  button {
-  margin-left: 40.5px;
-  margin-right: 40.5px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 3px;
-  background: rgb(241, 204, 123);
-  width: 312px;
-  height: 65px;
-  color: #fff;
-  font-size: 26px;
-  font-family: 'Ubuntu';
-  cursor: pointer;
-}
+ button {
+   margin-left: 40.5px;
+   margin-right: 40.5px;
+   margin-top: 20px;
+   border: none;
+   border-radius: 3px;
+   background: rgb(241, 204, 123);
+   width: 312px;
+   height: 65px;
+   color: #fff;
+   font-size: 26px;
+   font-family: 'Ubuntu';
+   cursor: pointer;
+ }
 
-  .button:hover {
-  opacity: 85%;
-}
+ .button:hover {
+   opacity: 85%;
+ }
 
-.course{
-  width: 272px;
-  height: 230px;
-  background: rgba(233, 209, 136, 0.6);
-  border: none;
-  border-radius: 3px;
-  padding-left: 20px;
-  font-family: 'Ubuntu';
-  color: gray;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
+ .course, .time {
+   width: 280px;
+   background: rgba(233, 209, 136, 0.6);
+   border: none;
+   border-radius: 3px;
+   font-family: 'Ubuntu';
+   color: gray;
+   padding-left: 12px;
+   font-weight: 300;
+   margin-bottom: 10px;
+   padding-bottom: 10px;
+   text-align: center;
+ }
 
-.time{
-  width: 272px;
-  height: 230px;
-  background: rgba(233, 209, 136, 0.6);
-  border: none;
-  border-radius: 3px;
-  padding-left: 20px;
-  font-family: 'Ubuntu';
-  color: gray;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
+ .radio{
+   float: left;
+ }
 
-.course p{
-  margin-top: 0px;
-  margin-bottom: -10px;
-}
 
-.time p{
-  margin-top: 10px;
-  margin-bottom: -10px;
-}
 
-p{
-  font-size: 15px;
-  color: gray;
-  font-weight: 500;
-  padding-top: 15px;
-}
+ .course p , .time p{
+   margin-top: 0px;
+   margin-bottom: 10px;
+ }
+
+ 
+
+ p {
+   font-size: 15px;
+   color: gray;
+   font-weight: 500;
+   padding-top: 15px;
+ }
