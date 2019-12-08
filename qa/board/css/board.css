@@ -5,7 +5,7 @@
 #boardList table {width: 920px;margin-top: 100px; margin-left: 200px;}
 
 #boardList th {padding: 10px 0; border-top: 2px solid #666; border-bottom: 1px solid #666;
-	font-size: 20px; color: gray; padding-right: 10px;}
+	font-size: 20px; color: gray; padding-right: 10px; background-color: #eee;}
 #boardList tr{font-size: 16px;}	
 #boardList tr:hover {background: #eee;} 
 #boardList td {padding: 10px 0; border-bottom: 1px solid #666;}
@@ -118,7 +118,7 @@
 #boardWrite #bID {width: 180px;}
 #boardWrite #bPassword {width: 180px;}
 #boardWrite #bTitle {width: 400px;}
-#boardWrite #bContent {width: 550px; height: 300px;}
+#boardWrite #bContent {width: 550px; height: 300px; }
 
 #boardWrite .btnSet {text-align: center; }
 #boardWrite .btnSet {float:right;}
@@ -164,17 +164,16 @@
 #boardView {float: left; width: 900px; margin-left: 20%}
 #boardView #boardTitle {border-bottom: 2px solid #333; font-size: 20px;}
 #boardView #boardInfo {margin: 20px 0; font-size: 18px; color:gray; font-weight: 500;}
-#boardView #boardContent {margin: 10px 0; font-size: 18px;}
+#boardView #boardContent {
+	font-size: 18px; 
+	margin-bottom: 30px; 
+	background-color: #d3d3d3; 
+	margin-left: 10px; 
+	margin-right: 10px;
+	border-radius: 8px;
+
+}
 #boardView .btnSet {text-align: right;}
-
-#boardView button{
-	padding: 40px;
-	background-image: url(../images/like.png);
-	margin-top: 20px;
-	height: 40px;
-	width: 40px;
-}	
-
 
 #boardView .btnSet a{
 color: white;
@@ -187,8 +186,38 @@ background-color: gray;
 text-decoration: none;}
 
 #boardView p{
+	margin-top: 20px;;
 	font-size: 40px;
 	font-weight: 200;
+}
+
+#boardView .like{
+	background-image: url(../image/like.png);
+	/*padding: 40px;*/
+	margin-top: 20px;
+	margin-right: 30px;
+	height: 40px;
+	width: 40px;
+	background-size: contain;
+	border: none;
+}
+
+#boardView .unlike{
+	background-image: url(../image/unlike.png);
+	/*padding: 40px;*/
+	margin-top: 20px;
+	height: 40px;
+	width: 40px;
+	background-size: contain;
+	border: none;
+}
+
+#boardView #boardID{
+	font-size: 20px;
+	color: rgb(4, 51, 121);
+	font-weight: bold;
+	margin-right: 65px;
+	margin-left: 5px;
 }
 
 	/* 댓글 쓰기*/
@@ -203,13 +232,34 @@ text-decoration: none;}
 	#commentView .twoDepth {margin: 20px; padding: 10px; background: #fff;}
 	#commentView .commentInfo {overflow: hidden;}
 	#commentView .commentId {float: left;}
-	#commentView .commentBtn {float: right;}
+	#commentView .commentBtn {
+		float: right;
+	}
+
+	#commentView .commentBtn{ 
+		color: white;
+		font-size: 20px;
+		font-weight: 20;
+		padding:5px 15px 5px 15px;
+		border-radius: px;
+		border: 2px solid white;
+		background-color: gray;
+		text-decoration: none;
+		margin-right: 20px;
+	}
+	
+	#commentView .commentBtn:hover{
+		background-color: #d3d3d3;
+		border: 2px solid white;
+		text-decoration: none;
+	}
+
 	#commentView .commentContent {clear: both;}
 
 	#boardComment p{
 		font-size: 35px;
 		margin-left: 10%;
-		margin-top: 70px;
+		margin-top: 100px;
 		margin-bottom: 30px;
 	}
 
@@ -239,7 +289,23 @@ text-decoration: none;}
 #boardDelete table {width: 720px;}
 #boardDelete tbody th {width: 100px; padding: 5px; text-align: right; vertical-align: top;}
 #boardDelete tbody td {width: 620px; padding: 5px;}
-#boardDelete .btnSet {text-align: center;}
-
+	#boardDelete .btnSet{ 
+		text-align: center;
+		color: white;
+		font-size: 20px;
+		font-weight: 20;
+		padding:5px 15px 5px 15px;
+		border-radius: px;
+		border: 2px solid white;
+		background-color: gray;
+		text-decoration: none;
+		margin-right: 20px;
+	}
+	
+	#boardDelete .btnSet:hover{
+		background-color: #d3d3d3;
+		border: 2px solid white;
+		text-decoration: none;
+	}
 
 .textCenter {text-align: center;}
