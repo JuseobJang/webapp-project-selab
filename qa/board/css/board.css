@@ -402,12 +402,12 @@
 	border-radius: 10px;
 }
 
-#commentView .commentBtn:hover {
+/* #commentView .commentBtn:hover {
 	background-color: #d3d3d3;
 	border: 2px solid white;
 	text-decoration: none;
 	
-}
+} */
 
 #commentView .commentContent {
 	clear: both;
@@ -489,6 +489,6 @@
 
 #commentView a{
 	font-size: 12pt;
-	text-decoration: none;
+	/* text-decoration: none; */
 	color : white;
 }

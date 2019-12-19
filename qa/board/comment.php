@@ -15,15 +15,11 @@ $result = $db->query($sql);
                     <div id="co_<?php echo $row['co_no'] ?>" class="commentSet">
                         <div class="commentInfo">
                             <div class="commentId">Name:
-                                <span class="coId"><?php echo $row['co_id'] ?></span></div>
+                                <span class="coId"><?php echo $row['co_id'] ?></span>
+                            </div>
                             <div class="commentBtn">
                                 <a href="#" class="comt write">Comment</a>
-                            </div>
-                            <div class="commentBtn">
                                 <a href="#" class="comt modify">Modify</a>
-                            </div>
-                            <div class="commentBtn">
-
                                 <a href="#" class="comt delete">Delete</a>
                             </div>
                         </div>
