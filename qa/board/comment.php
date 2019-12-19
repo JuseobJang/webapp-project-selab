@@ -1,64 +1,69 @@
 <?php
-	$sql = 'select * from comment_free where co_no=co_order and b_no=' . $bNo;
-    $result = $db->query($sql);
+$sql = 'select * from comment_free where co_no=co_order and b_no=' . $bNo;
+$result = $db->query($sql);
 ?>
 <div id="commentView">
     <form action="comment_update.php" method="post">
-        <input type="hidden" name="bno" value="<?php echo $bNo?>">
+        <input type="hidden" name="bno" value="<?php echo $bNo ?>">
         <?php
-			while($row = $result->fetch_assoc()) {
-		?>
-        <ul class="oneDepth">
-            <!---1depth 댓글 출력--->
-            <!-- <?php $_SESSION['co_no'] = 1;?>  -->
-            <li>
-                <div id="co_<?php echo $row['co_no']?>" class="commentSet">
-                    <div class="commentInfo">
-                        <div class="commentId">Name:
-                            <span class="coId"><?php echo $row['co_id']?></span></div>
-                        <div class="commentBtn">
-                            <a href="#" class="comt write">Comment</a>
-                            <a href="#" class="comt modify">Modify</a>
-                            <a href="#" class="comt delete">Delete</a>
-                        </div>
-                    </div>
-                    <div class="commentContent"><?php echo $row['co_content']?></div>
-                </div>
-                <?php
-					$sql2 = 'select * from comment_free where co_no!=co_order and co_order=' . $row['co_no'];
-					$result2 = $db->query($sql2);
-				
-					while($row2 = $result2->fetch_assoc()) {
-				?>
-                <ul class="twoDepth">
-                    <!---2depth 댓글 출력--->
-                    <li>
-                        <div id="co_<?php echo $row2['co_no']?>" class="commentSet">
-                            <div class="commentInfo">
-                                <div class="commentId">Name:
-                                    <span class="coId"><?php echo $row2['co_id']?></span></div>
-                                <div class="commentBtn">
-                                    <a href="#" class="comt modify">Modify</a>
-                                    <a href="#" class="comt delete">Delete</a>
-                                </div>
+        while ($row = $result->fetch_assoc()) {
+        ?>
+            <ul class="oneDepth">
+                <!---1depth 댓글 출력--->
+                <!-- <?php $_SESSION['co_no'] = 1; ?>  -->
+                <li>
+                    <div id="co_<?php echo $row['co_no'] ?>" class="commentSet">
+                        <div class="commentInfo">
+                            <div class="commentId">Name:
+                                <span class="coId"><?php echo $row['co_id'] ?></span></div>
+                            <div class="commentBtn">
+                                <a href="#" class="comt write">Comment</a>
                             </div>
-                            <div class="commentContent"><?php echo $row2['co_content'] ?></div>
+                            <div class="commentBtn">
+                                <a href="#" class="comt modify">Modify</a>
+                            </div>
+                            <div class="commentBtn">
+
+                                <a href="#" class="comt delete">Delete</a>
+                            </div>
                         </div>
-                    </li>
-                </ul>
-                <?php
-					}
-				?>
-            </li>
-        </ul>
+                        <div class="commentContent"><?php echo $row['co_content'] ?></div>
+                    </div>
+                    <?php
+                    $sql2 = 'select * from comment_free where co_no!=co_order and co_order=' . $row['co_no'];
+                    $result2 = $db->query($sql2);
+
+                    while ($row2 = $result2->fetch_assoc()) {
+                    ?>
+                        <ul class="twoDepth">
+                            <!---2depth 댓글 출력--->
+                            <li>
+                                <div id="co_<?php echo $row2['co_no'] ?>" class="commentSet">
+                                    <div class="commentInfo">
+                                        <div class="commentId">Name:
+                                            <span class="coId"><?php echo $row2['co_id'] ?></span></div>
+                                        <div class="commentBtn">
+                                            <a href="#" class="comt modify">Modify</a>
+                                            <a href="#" class="comt delete">Delete</a>
+                                        </div>
+                                    </div>
+                                    <div class="commentContent"><?php echo $row2['co_content'] ?></div>
+                                </div>
+                            </li>
+                        </ul>
+                    <?php
+                    }
+                    ?>
+                </li>
+            </ul>
         <?php } ?>
     </form>
-    
+
 </div>
 <hr>
 <form action="comment_update.php" method="post">
     <!------댓글 작성 폼 ------>
-    <input type="hidden" name="bno" value="<?php echo $bNo?>">
+    <input type="hidden" name="bno" value="<?php echo $bNo ?>">
     <p>Your Answer</p>
     <table>
         <tbody>
@@ -84,15 +89,15 @@
             </tr>
         </tbody>
         <div class="cobtnSet">
-        <input type="submit" value="comment write"></div>
+            <input type="submit" value="comment write"></div>
     </table>
 </form>
 
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
         var commentSet = '';
         var action = '';
-        $('#commentView').delegate('.comt', 'click', function () {
+        $('#commentView').delegate('.comt', 'click', function() {
             //현재 작성 내용을 변수에 넣음
             commentSet = $(this)
                 .parents('.commentSet')
@@ -170,7 +175,7 @@
                 comment += '			<tr>';
                 comment += '				<th scope="row"><label for="coContent">Contents</label></th>';
                 comment += '				<td><textarea name="coContent" id="coContent">' + coContent + '</textarea>' +
-                        '</td>';
+                    '</td>';
                 comment += '			</tr>';
             }
             comment += '		</tbody>';
@@ -186,7 +191,7 @@
             return false;
         });
 
-        $('#commentView').delegate(".cancel", "click", function () {
+        $('#commentView').delegate(".cancel", "click", function() {
             if (action == 'w') {
                 $('.writeComment').remove();
             } else if (action == 'u') {
