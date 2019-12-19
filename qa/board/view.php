@@ -3,6 +3,7 @@
 	require_once("../dbconfig.php");
 	$bNo = $_GET['bno'];
 	$db = mysqli_connect("localhost", "webapp", "webapp", "webapp", "3306") or die("fail");
+	mysqli_set_charset($db,"utf8");
 	if(!empty($bNo) && empty($_COOKIE['board_free_' . $bNo])) {
 		$sql = 'update board_free set b_hit = b_hit + 1 where b_no = ' . $bNo;
 		$result = $db->query($sql);
