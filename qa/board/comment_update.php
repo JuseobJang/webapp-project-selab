@@ -15,7 +15,7 @@
 	$coPassword = $_POST['coPassword'];
 
 	if($w !== 'd') {//$w 변수가 d일 경우 $coContent와 $coId가 필요없다
-		$coContent = $_POST['coContent'];
+		$coContent = htmlspecialchars($_POST['coContent']);
 		if($w !== 'u') {//$w 변수가 u일 경우 $coId가 필요없다
 			$coId = $_POST['coId'];
 		}

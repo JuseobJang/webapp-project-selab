@@ -15,7 +15,7 @@
 	//항상 변수 선언
 	$bPassword = $_POST['bPassword'];
 	$bTitle = $_POST['bTitle'];
-	$bContent = $_POST['bContent'];
+	$bContent = htmlspecialchars($_POST['bContent']);
 
 //글 수정
 if(isset($bNo)) {
