@@ -24,7 +24,7 @@ $result = $db->query($sql);
                             </div>
                             
                         </div>
-                        <div class="commentContent"><?php echo $row['co_content'] ?></div>
+                        <div style="white-space:pre; " class="commentContent"><?php echo nl2br($row['co_content']) ?></div>
                     </div>
                     <?php
                     $sql2 = 'select * from comment_free where co_no!=co_order and co_order=' . $row['co_no'];
@@ -44,7 +44,7 @@ $result = $db->query($sql);
                                             <a href="#" class="comt delete">Delete</a>
                                         </div>
                                     </div>
-                                    <div class="commentContent"><?php echo $row2['co_content'] ?></div>
+                                    <div style="white-space:pre;" class="commentContent"><?php echo nl2br($row2['co_content']) ?></div>
                                 </div>
                             </li>
                         </ul>
