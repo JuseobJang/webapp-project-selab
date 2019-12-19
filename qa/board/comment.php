@@ -22,6 +22,7 @@ $result = $db->query($sql);
                                 <a href="#" class="comt modify">Modify</a>
                                 <a href="#" class="comt delete">Delete</a>
                             </div>
+                            
                         </div>
                         <div class="commentContent"><?php echo $row['co_content'] ?></div>
                     </div>
