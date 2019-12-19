@@ -78,8 +78,8 @@
 			</div>
 			<div id="boardContent"><?php echo $row['b_content']?></div>
 			<form action="like_action.php" method="POST">
-				<button type='submit' name='like' value='1'>LIKE</button>
-				<button type ='submit' name='like' value='0'>UNLIKE</button>
+				<button type='submit' id="like" name='like' value='1'>LIKE</button>
+				<button type ='submit' id= "unlike" name='like' value='0'>UNLIKE</button>
 			</form>
 			<span id="boardID">like : <?php echo $row['likes']?></span>
 			<span id="boardID">unlike : <?php echo $row['unlikes']?></span>
